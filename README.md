@@ -14,7 +14,7 @@ workshops to assemble your creations, people to feed, cloth and defend.
 There will be cities, fortresses and farms, powerful explosives to shape and mine the terrain,
 and epic creations that dwarf everything that came before them!
 
-The opportunities are endless.
+The opportunities are endless. DXM is more than just a tech mod: it's an experience.
 
 Deus Ex Machina is firmly rooted in a realistic world of ores, plant life, electrical, 
 mechanical and chemical principles and the systems that grew from an understanding of these things.
@@ -28,7 +28,7 @@ anything was changed.
 In many cases ideas are abstracted for programmings sake but beyond that you will find the mod to be as
 educational as it is entertaining.
 
-By default Deus ex machina will not interfere with other mods or vanilla game features, however, the mod is intended
+By default Deus Ex Machina will not interfere with other mods or vanilla game features, however, the mod is intended
 to be played as a tech mod by itself. Options to disable some of the vanilla game are intended to be activated as well.
 
 
