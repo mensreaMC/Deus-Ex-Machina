@@ -38,8 +38,8 @@ Though DXM is built around the Universal Electricity framework it will not be co
 If this is your first time visiting this github then I highly suggest reading documents in a certain order. You can find all design documents under the "issues" section of the github. Please contribute what you can in the form of ideas or suggestions by email: mensreamc@gmail.com. Contributers who offer high quality or consistent submissions will likely be granted github access. Now, on to the suggested reading:
 
 I.Mod design philosophies and general mod overview
-A.make sure you check out the general mod overview section of the article as it offers a more comprehensive rundown
-B.the rest of the document is kind of the mission statement 
+1.make sure you check out the general mod overview section of the article as it offers a more comprehensive rundown
+2.the rest of the document is kind of the mission statement 
 
 II.Workshop system and blocks
 
