@@ -40,17 +40,19 @@ If this is your first time visiting this github then I highly suggest reading do
 I.Mod design philosophies and general mod overview 
 (make sure you check out the general mod overview section of the article as it offers a more comprehensive rundown, the rest of the document is kind of the mission statement)
 
-II.Workshop system and blocks
+II.The DXM Experience
 
-III.Labor system and blocks
+III.Workshop system and blocks
 
-IV.The peoples tools!
+IV.Labor system and blocks
 
-V.Power plant/machine general blocks
+V.The peoples tools!
 
-VI.Mining machines and ore processing overview (you may need to consult Worldgen (mineral) alongside that)
+VI.Power plant/machine general blocks
 
-VII.any documents as you now likely have a firm understanding of what we are trying to achieve, but I recomend the Sub-critical Steam Plant document for a good start on how we will approach power generation
+VII.Mining machines and ore processing overview (you may need to consult Worldgen (mineral) alongside that)
+
+IIX.any documents as you now likely have a firm understanding of what we are trying to achieve, but I recomend the Sub-critical Steam Plant document for a good start on how we will approach power generation
 
                                                   **THE PITCH PHASE**
                                                     
