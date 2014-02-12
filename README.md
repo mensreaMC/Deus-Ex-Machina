@@ -77,7 +77,7 @@ V.supporters
 A.supporters are people who can spread the word and be advocates for the project. people who can keep pitch threads bumped and offer the programmers, spriters and co-designers vocal and emotional support.
 
 
-                                      I am aiming to make the pitch on 2/14/14.
+                                      I am aiming to make the pitch on 2/21/14.
                                                     
         
 
