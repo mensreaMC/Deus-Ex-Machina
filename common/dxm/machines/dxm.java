@@ -151,12 +151,12 @@ public class dxm
         GameRegistry.registerBlock(sulfurCobble, ItemSulfurCobble.class, modid + (sulfurCobble.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(uraniniteOre, ItemUraniniteCobble.class, modid + (uraniniteOre.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(uraniniteCobble, ItemUraniniteCobble.class, modid + (uraniniteCobble.getUnlocalizedName().substring(5)));
-        squeeItem = new ItemSquee(5000).setUnlocalizedName("squeeItem");
+        squeeItem = new ItemSquee(5000).setUnlocalizedName("squeeItem").setTextureName(modid + ":squeeItem");
         bauxiteItem = new ItemBauxite(5001).setUnlocalizedName("bauxiteCobble");
         cassititeriteItem = new ItemCassititerite(5002).setUnlocalizedName("cassititeriteCobble");
         galenaItem = new ItemGalena(5003).setUnlocalizedName("galenaCobble");
         hematiteItem = new ItemHematite(5004).setUnlocalizedName("hematiteCobble");
-        limestoneItem = new ItemLimestone(5005).setUnlocalizedName("limestoneCobble");
+        limestoneItem = new ItemLimestone(5005).setUnlocalizedName("limestoneCobble").setTextureName(modid + ":limestoneCobble");
         // hempSeeds = new ItemHempSeeds(5006, 1, 0).setUnlocalizedName("hempSeeds");
         // LanguageRegistry.addName(hempSeeds, "Hemp Seeds");
         GameRegistry.registerWorldGenerator(eventmanager);

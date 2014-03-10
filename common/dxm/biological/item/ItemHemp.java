@@ -1,14 +1,11 @@
 package dxm.biological.item;
 
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-
-import dxm.biological.BioSpawnMain;
 
 public class ItemHemp extends Item
 {
@@ -32,11 +29,5 @@ public class ItemHemp extends Item
         // Find different effect XXX
         player.addPotionEffect(new PotionEffect(Potion.jump.id, 900, 0));
         return new ItemStack(itemStack.getItem(), itemStack.stackSize - 1);
-    }
-
-    @Override
-    public void registerIcons(IconRegister par1IconRegister)
-    {
-        itemIcon = par1IconRegister.registerIcon(BioSpawnMain.modID + ":" + this.getUnlocalizedName());
     }
 }

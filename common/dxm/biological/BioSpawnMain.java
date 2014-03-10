@@ -101,8 +101,11 @@ public class BioSpawnMain
     {
         BioTestBlock biotestBlock = new BioTestBlock(2996, Material.clay); // Test block for use in theoretical tests of concept
         GameRegistry.registerBlock(biotestBlock, "Bio Test Block");
-        HempSeeds = new BioSpawnSeed(BioSpawnConfig.HempSeedsID, BioSpawnConfig.HempBlockID, "hempSeeds", 48);
-        HempItem = new ItemHemp(BioSpawnConfig.HempItemID).setUnlocalizedName("hempItem").setCreativeTab(CreativeTabs.tabMisc);
+        HempSeeds = (ItemSeeds) new BioSpawnSeed(BioSpawnConfig.HempSeedsID, BioSpawnConfig.HempBlockID, "hempSeeds", 48).setTextureName(BioSpawnMain.modID
+                                                                                                                                         + ":hempSeeds");
+        HempItem = new ItemHemp(BioSpawnConfig.HempItemID).setUnlocalizedName("hempItem")
+                                                          .setTextureName(BioSpawnMain.modID + ":hempItem")
+                                                          .setCreativeTab(CreativeTabs.tabMisc);
         HempBlock = new HempBlock(BioSpawnConfig.HempBlockID,
                                   0,
                                   HempSeeds,
