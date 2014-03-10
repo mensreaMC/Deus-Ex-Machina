@@ -11,7 +11,7 @@ public class BioTestBlock extends Block
     {
         super(par1, par2Material);
         setCreativeTab(CreativeTabs.tabBlock);
-        setUnlocalizedName("Bio Test Block");
+        setUnlocalizedName("BioTestBlock");
     }
 
     // @Override

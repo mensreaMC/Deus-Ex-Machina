@@ -1,0 +1,9 @@
+# items
+item.hempSeeds.name=Hemp Seed
+item.hempItem.name=Hemp Block
+
+# blocks
+tile.BioTestBlock.name=Bio Test Block
+
+# deaths
+death.overdose=%1$s overdosed

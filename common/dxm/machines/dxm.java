@@ -4,14 +4,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import dxm.biological.block.BlockFertilizedBlock;
 import dxm.biological.block.BlockTilledfertilizedBlock;
@@ -153,34 +151,6 @@ public class dxm
         GameRegistry.registerBlock(sulfurCobble, ItemSulfurCobble.class, modid + (sulfurCobble.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(uraniniteOre, ItemUraniniteCobble.class, modid + (uraniniteOre.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(uraniniteCobble, ItemUraniniteCobble.class, modid + (uraniniteCobble.getUnlocalizedName().substring(5)));
-        /*
-         * for(int i = 0; i < Names.oreMetaBlock_name.length; i++) {
-         * LanguageRegistry.addName(new ItemStack(OreMetaBlock, 1, i), Names.oreMetaBlock_name[i]);}
-         */
-        LanguageRegistry.addName(new ItemStack(fertilizedBlock, 1, 0), "Fertilized Block");
-        LanguageRegistry.addName(new ItemStack(tilledfertilizedBlock, 1, 0), "Tilled Fertilized Block");
-        LanguageRegistry.addName(new ItemStack(squeeBlock, 1, 0), "Squee Block");
-        LanguageRegistry.addName(new ItemStack(bauxiteOre, 1, 0), "Bauxite Ore");
-        LanguageRegistry.addName(new ItemStack(cassititeriteOre, 1, 0), "Cassititerite Ore");
-        LanguageRegistry.addName(new ItemStack(galenaOre, 1, 0), "Galena Ore");
-        LanguageRegistry.addName(new ItemStack(hematiteOre, 1, 0), "Hematite Ore");
-        LanguageRegistry.addName(new ItemStack(limestoneOre, 1, 0), "Limestone Ore");
-        LanguageRegistry.addName(new ItemStack(bauxiteCobble, 1, 0), "Bauxite Cobble");
-        LanguageRegistry.addName(new ItemStack(cassititeriteCobble, 1, 0), "Cassititerite Cobble");
-        LanguageRegistry.addName(new ItemStack(galenaCobble, 1, 0), "Galena Cobble");
-        LanguageRegistry.addName(new ItemStack(hematiteCobble, 1, 0), "Hematite Cobble");
-        LanguageRegistry.addName(new ItemStack(limestoneCobble, 1, 0), "Limestone Cobble");
-        LanguageRegistry.addName(new ItemStack(malachiteOre, 1, 0), "Malachite Ore");
-        LanguageRegistry.addName(new ItemStack(malachiteCobble, 1, 0), "Malachite Cobble");
-        LanguageRegistry.addName(new ItemStack(coalOre, 1, 0), "Coal Ore");
-        LanguageRegistry.addName(new ItemStack(coalCobble, 1, 0), "Coal Cobble");
-        LanguageRegistry.addName(new ItemStack(monaziteSand, 1, 0), "Monazite Sand");
-        LanguageRegistry.addName(new ItemStack(nativegoldOre, 1, 0), "Native Gold Ore");
-        LanguageRegistry.addName(new ItemStack(nativegoldCobble, 1, 0), "Native Gold Cobble");
-        LanguageRegistry.addName(new ItemStack(sulfurOre, 1, 0), "Sulfur Ore");
-        LanguageRegistry.addName(new ItemStack(sulfurCobble, 1, 0), "Sulfur Cobble");
-        LanguageRegistry.addName(new ItemStack(uraniniteOre, 1, 0), "Uraninite Ore");
-        LanguageRegistry.addName(new ItemStack(uraniniteCobble, 1, 0), "Uraninite Cobble");
         squeeItem = new ItemSquee(5000).setUnlocalizedName("squeeItem");
         bauxiteItem = new ItemBauxite(5001).setUnlocalizedName("bauxiteCobble");
         cassititeriteItem = new ItemCassititerite(5002).setUnlocalizedName("cassititeriteCobble");
@@ -188,12 +158,6 @@ public class dxm
         hematiteItem = new ItemHematite(5004).setUnlocalizedName("hematiteCobble");
         limestoneItem = new ItemLimestone(5005).setUnlocalizedName("limestoneCobble");
         // hempSeeds = new ItemHempSeeds(5006, 1, 0).setUnlocalizedName("hempSeeds");
-        LanguageRegistry.addName(squeeItem, "Squee Item");
-        LanguageRegistry.addName(bauxiteItem, "Bauxite Cobble");
-        LanguageRegistry.addName(cassititeriteItem, "Cassititerite Cobble");
-        LanguageRegistry.addName(galenaItem, "Galena Cobble");
-        LanguageRegistry.addName(hematiteItem, "Hematite Cobble");
-        LanguageRegistry.addName(limestoneItem, "Limestone Cobble");
         // LanguageRegistry.addName(hempSeeds, "Hemp Seeds");
         GameRegistry.registerWorldGenerator(eventmanager);
     }

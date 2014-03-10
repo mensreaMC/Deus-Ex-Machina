@@ -19,7 +19,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import dxm.biological.block.BioTestBlock;
 import dxm.biological.block.HempBlock;
@@ -102,9 +101,8 @@ public class BioSpawnMain
     {
         BioTestBlock biotestBlock = new BioTestBlock(2996, Material.clay); // Test block for use in theoretical tests of concept
         GameRegistry.registerBlock(biotestBlock, "Bio Test Block");
-        LanguageRegistry.addName(biotestBlock, "Bio Test Block");
-        HempSeeds = new BioSpawnSeed(BioSpawnConfig.HempSeedsID, BioSpawnConfig.HempBlockID, "HempSeeds", 48);
-        HempItem = new ItemHemp(BioSpawnConfig.HempItemID).setUnlocalizedName("HempItem").setCreativeTab(CreativeTabs.tabMisc);
+        HempSeeds = new BioSpawnSeed(BioSpawnConfig.HempSeedsID, BioSpawnConfig.HempBlockID, "hempSeeds", 48);
+        HempItem = new ItemHemp(BioSpawnConfig.HempItemID).setUnlocalizedName("hempItem").setCreativeTab(CreativeTabs.tabMisc);
         HempBlock = new HempBlock(BioSpawnConfig.HempBlockID,
                                   0,
                                   HempSeeds,
@@ -113,8 +111,5 @@ public class BioSpawnMain
                                   BioSpawnConfig.HempNonFertileGrowth,
                                   "Hemp");
         MinecraftForge.addGrassSeed(new ItemStack(HempSeeds, 1), 10);
-        LanguageRegistry.addName(HempSeeds, "Hemp Seed");
-        LanguageRegistry.addName(HempBlock, "Hemp Block");
-        BioSpawnDamageSource.localize();
     }
 }
