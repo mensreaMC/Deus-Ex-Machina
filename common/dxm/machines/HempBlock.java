@@ -37,9 +37,9 @@ public class HempBlock extends BioSpawnCrop
     }
 
     @Override
-    public ArrayList getBlockDropped(World world, int x, int y, int z, int metaData, int levelEnchant)
+    public ArrayList<ItemStack> getBlockDropped(World world, int x, int y, int z, int metaData, int levelEnchant)
     {
-        ArrayList itemList = new ArrayList();
+        ArrayList<ItemStack> itemList = new ArrayList<ItemStack>();
         itemList.add(new ItemStack(mySeed, 1));
         if (metaData == 3)
         {

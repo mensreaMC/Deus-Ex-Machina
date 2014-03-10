@@ -1,0 +1,15 @@
+[
+  {
+    "modid": "dxm",
+    "name": "Deus Ex Machina",
+    "description": "SOMETHING TO BE FILLED IN",
+    "credits": "PEOPLE",
+    "logoFile": "/assets/dxm/textures/logo.png",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/mensreaMC/Deus-Ex-Machina",
+    "authors": [
+      "AUTHORS"
+    ]
+  }
+]

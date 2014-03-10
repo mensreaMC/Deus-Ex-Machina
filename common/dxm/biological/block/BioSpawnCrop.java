@@ -95,9 +95,9 @@ public class BioSpawnCrop extends BlockCrops
     }
 
     @Override
-    public ArrayList getBlockDropped(World world, int x, int y, int z, int metaData, int levelEnchant)
+    public ArrayList<ItemStack> getBlockDropped(World world, int x, int y, int z, int metaData, int levelEnchant)
     {
-        ArrayList itemList = new ArrayList();
+        ArrayList<ItemStack> itemList = new ArrayList<ItemStack>();
         if (metaData < 3)
         {
             itemList.add(new ItemStack(mySeed));

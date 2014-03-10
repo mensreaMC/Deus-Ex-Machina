@@ -62,7 +62,7 @@ import dxm.machines.items.ItemUraniniteCobble;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class dxm
 {
-    public static final String modid = "mensrea_dxm";
+    public static final String modid = "dxm";
     // public static Block OreMetaBlock;
     public static Block fertilizedBlock;
     public static Block tilledfertilizedBlock;

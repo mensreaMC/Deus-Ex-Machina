@@ -1,6 +1,5 @@
 package dxm.machines;
 
-
 public class Names
 {
     public static final String tutItem_unlocalizedName = "tutorialItem";
