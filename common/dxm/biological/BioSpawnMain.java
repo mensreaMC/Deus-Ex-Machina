@@ -22,10 +22,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import dxm.biological.block.BioTestBlock;
-import dxm.biological.items.BioSpawnSeed;
-import dxm.biological.items.ItemHemp;
+import dxm.biological.block.HempBlock;
+import dxm.biological.item.BioSpawnSeed;
+import dxm.biological.item.ItemHemp;
 import dxm.biological.sided.BioCommonProxy;
-import dxm.machines.HempBlock;
 
 @Mod(modid = "dxmm", name = "Deus Ex Machina", version = "0.1.0", useMetadata = true)
 // , dependencies="required-after:GregTech_Addon")
