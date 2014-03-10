@@ -33,13 +33,13 @@ import dxm.machines.HempBlock;
 public class BioSpawnMain
 {
     static boolean GTExists = false;
-    public static final String modID = "mensrea_dxm";
+    public static final String modID = "dxm";
     public static ArrayList<ItemStack> noCure = new ArrayList<ItemStack>();
     // noCure is used for potion effects, to make it so that milk can not clear drug effects, if I don't want it to
     public static ItemSeeds HempSeeds;
     public static Item HempItem;
     public static BlockCrops HempBlock;
-    public static final String tex = "/mensrea_dxm/textures/items/hempSeed.png";
+    public static final String tex = "/dxm/textures/items/hempSeed.png";
     @SidedProxy(clientSide = "bio.src.BioClientProxy", serverSide = "bio.src.BioCommonProxy")
     public static BioCommonProxy proxy;
 
