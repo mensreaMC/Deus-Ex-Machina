@@ -3,30 +3,29 @@ package dxmm;
 import java.util.List;
 import java.util.Random;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
-
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Icon;
 import net.minecraft.block.material.Material;
+//TODO follow dated tutorial
 
 public class MultiBlock extends Block {
 	public MultiBlock (int id) {
 		super(id, Material.ground);
-		setBlockName("multiBlock");
+		setUnlocalizedName("multiBlock");
 		setCreativeTab(CreativeTabs.tabBlock);
 	}
 	
-	@Override
-	public int getBlockTextureFromSideAndMetadata (int side, int metadata) {
-		return 16 + metadata;
-	}
 	
 	@Override
-	public String getTextureFile () {
-		return CommonProxy.BLOCK_PNG;
+	public Icon getIcon(int par1, int par2) {
+		// TODO Auto-generated method stub
+		return super.getIcon(par1, par2);
 	}
+	
 	
 	@Override
 	public int damageDropped (int metadata) {

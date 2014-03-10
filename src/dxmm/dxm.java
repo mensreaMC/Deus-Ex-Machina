@@ -1,6 +1,7 @@
 package dxmm;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
@@ -43,6 +44,7 @@ public class dxm
        public static Block uraniniteOre;
        public static Block uraniniteCobble;
 
+       public static CreativeTabs tab = new CreativeTabs("tab");
       
        public static Item squeeItem;
        public static Item bauxiteItem;

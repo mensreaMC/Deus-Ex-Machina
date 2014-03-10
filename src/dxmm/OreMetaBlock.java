@@ -12,7 +12,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class OreMetaBlock extends Block
 {
 	public OreMetaBlock(int id) {
-		super(id, Material.rock);setCreativeTab(dxmm.dxm);}
+		super(id, Material.rock);setCreativeTab(dxm.tab);}
 	
 	@SideOnly(Side.CLIENT)public static Icon[] icons;
 	
@@ -20,7 +20,7 @@ public class OreMetaBlock extends Block
 	
 	public void registerIcons(IconRegister icon) {
 		icons = new Icon[Names.oreMetaBlock_unlocalizedName.length];
-		for(int i = 0; i < icons.length; i++) {icons[i] = icon.registerIcon(ModInfo.ID.toLowerCase() + ":" + Names.oreMetaBlock_unlocalizedName[i]);}}
+		for(int i = 0; i < icons.length; i++) {icons[i] = icon.registerIcon(dxm.modid.toLowerCase() + ":" + Names.oreMetaBlock_unlocalizedName[i]);}}
 	
 	@Override public Icon getIcon(int side, int meta) {return icons[meta];}
 	
