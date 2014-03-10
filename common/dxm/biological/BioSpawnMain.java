@@ -27,20 +27,20 @@ import dxm.biological.item.BioSpawnSeed;
 import dxm.biological.item.ItemHemp;
 import dxm.biological.sided.BioCommonProxy;
 
-@Mod(modid = "dxmm", name = "Deus Ex Machina", version = "0.1.0", useMetadata = true)
+@Mod(modid = "dxm_bio", name = "Deus Ex Machina - Bio", version = "0.0.1", useMetadata = true)
 // , dependencies="required-after:GregTech_Addon")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class BioSpawnMain
 {
     static boolean GTExists = false;
-    public static final String modID = "dxm";
+    public static final String modID = "dxm_bio";
     public static ArrayList<ItemStack> noCure = new ArrayList<ItemStack>();
     // noCure is used for potion effects, to make it so that milk can not clear drug effects, if I don't want it to
     public static ItemSeeds HempSeeds;
     public static Item HempItem;
     public static BlockCrops HempBlock;
     public static final String tex = "/dxm/textures/items/hempSeed.png";
-    @SidedProxy(clientSide = "bio.src.BioClientProxy", serverSide = "bio.src.BioCommonProxy")
+    @SidedProxy(clientSide = "dxm.biological.sided.BioClientProxy", serverSide = "dxm.biological.sided.BioCommonProxy")
     public static BioCommonProxy proxy;
 
     @EventHandler

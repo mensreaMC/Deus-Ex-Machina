@@ -58,7 +58,7 @@ import dxm.machines.item.block.cobble.ItemNativegoldCobble;
 import dxm.machines.item.block.cobble.ItemSulfurCobble;
 import dxm.machines.item.block.cobble.ItemUraniniteCobble;
 
-@Mod(modid = dxm.modid, name = "Deus Ex Machina", version = "1.0")
+@Mod(modid = dxm.modid, name = "Deus Ex Machina", version = "0.0.1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class dxm
 {
