@@ -76,6 +76,7 @@ Icon
 *.ipr
 *.iws
 .idea/
+out/
 
 ############
 # Minecraft

@@ -1,15 +1,12 @@
 package dxm.biological.item;
 
+import dxm.biological.BioSpawnMain;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSeeds;
 
-import dxm.biological.BioSpawnMain;
-
-public class HempSeeds extends ItemSeeds
-{
-    public HempSeeds(int id, int type, int growthID)
-    {
+public class HempSeeds extends ItemSeeds {
+    public HempSeeds(int id, int type, int growthID) {
         super(id, type, growthID);
         // setTextureName("/mensrea_dxm/textures/items/hempSeed.png");
         setCreativeTab(CreativeTabs.tabMisc);
@@ -18,8 +15,7 @@ public class HempSeeds extends ItemSeeds
     }
 
     @Override
-    public void registerIcons(IconRegister par1IconRegister)
-    {
+    public void registerIcons(IconRegister par1IconRegister) {
         itemIcon = par1IconRegister.registerIcon(BioSpawnMain.modID + ":" + this.getUnlocalizedName());
     }
 }

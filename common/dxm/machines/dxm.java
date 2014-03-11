@@ -1,65 +1,29 @@
 package dxm.machines;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-
 import dxm.biological.block.BlockFertilizedBlock;
 import dxm.biological.block.BlockTilledfertilizedBlock;
 import dxm.biological.item.block.ItemFertilizedBlock;
 import dxm.biological.item.block.ItemTilledfertilizedBlock;
 import dxm.machines.block.BlockMonaziteSand;
 import dxm.machines.block.BlockSqueeBlock;
-import dxm.machines.block.cobble.BlockBauxiteCobble;
-import dxm.machines.block.cobble.BlockCassititeriteCobble;
-import dxm.machines.block.cobble.BlockCoalCobble;
-import dxm.machines.block.cobble.BlockGalenaCobble;
-import dxm.machines.block.cobble.BlockHematiteCobble;
-import dxm.machines.block.cobble.BlockLimestoneCobble;
-import dxm.machines.block.cobble.BlockMalachiteCobble;
-import dxm.machines.block.cobble.BlockNativegoldCobble;
-import dxm.machines.block.cobble.BlockSulfurCobble;
-import dxm.machines.block.cobble.BlockUraniniteCobble;
-import dxm.machines.block.ore.BlockBauxiteOre;
-import dxm.machines.block.ore.BlockCassititeriteOre;
-import dxm.machines.block.ore.BlockCoalOre;
-import dxm.machines.block.ore.BlockGalenaOre;
-import dxm.machines.block.ore.BlockHematiteOre;
-import dxm.machines.block.ore.BlockLimestoneOre;
-import dxm.machines.block.ore.BlockMalachiteOre;
-import dxm.machines.block.ore.BlockNativegoldOre;
-import dxm.machines.block.ore.BlockSulfurOre;
-import dxm.machines.block.ore.BlockUraniniteOre;
-import dxm.machines.item.ItemBauxite;
-import dxm.machines.item.ItemCassititerite;
-import dxm.machines.item.ItemGalena;
-import dxm.machines.item.ItemHematite;
-import dxm.machines.item.ItemLimestone;
-import dxm.machines.item.ItemMonaziteSand;
-import dxm.machines.item.ItemSquee;
+import dxm.machines.block.cobble.*;
+import dxm.machines.block.ore.*;
+import dxm.machines.item.*;
 import dxm.machines.item.block.ItemSqueeBlock;
-import dxm.machines.item.block.cobble.ItemBauxiteCobble;
-import dxm.machines.item.block.cobble.ItemCassititeriteCobble;
-import dxm.machines.item.block.cobble.ItemCoalCobble;
-import dxm.machines.item.block.cobble.ItemGalenaCobble;
-import dxm.machines.item.block.cobble.ItemHematiteCobble;
-import dxm.machines.item.block.cobble.ItemLimestoneCobble;
-import dxm.machines.item.block.cobble.ItemMalachiteCobble;
-import dxm.machines.item.block.cobble.ItemNativegoldCobble;
-import dxm.machines.item.block.cobble.ItemSulfurCobble;
-import dxm.machines.item.block.cobble.ItemUraniniteCobble;
+import dxm.machines.item.block.cobble.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 @Mod(modid = dxm.modid, name = "Deus Ex Machina", version = "0.0.1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-public class dxm
-{
+public class dxm {
     public static final String modid = "dxm";
     // public static Block OreMetaBlock;
     public static Block fertilizedBlock;
@@ -97,8 +61,7 @@ public class dxm
     EventManager eventmanager = new EventManager();
 
     @EventHandler
-    public void load(FMLInitializationEvent event)
-    {
+    public void load(FMLInitializationEvent event) {
         // OreMetaBlock = new OreMetaBlock(Ids.oreMetaBlock_actual);
         fertilizedBlock = new BlockFertilizedBlock(524, Material.rock).setUnlocalizedName("fertilizedBlock");
         tilledfertilizedBlock = new BlockTilledfertilizedBlock(525, Material.rock).setUnlocalizedName("tilledfertilizedBlock");
@@ -126,8 +89,8 @@ public class dxm
         uraniniteCobble = new BlockUraniniteCobble(523, Material.rock).setUnlocalizedName("uraniniteCobble");
         GameRegistry.registerBlock(fertilizedBlock, ItemFertilizedBlock.class, modid + (fertilizedBlock.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(tilledfertilizedBlock,
-                                   ItemTilledfertilizedBlock.class,
-                                   modid + (tilledfertilizedBlock.getUnlocalizedName().substring(5)));
+                ItemTilledfertilizedBlock.class,
+                modid + (tilledfertilizedBlock.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(squeeBlock, ItemSqueeBlock.class, modid + (squeeBlock.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(bauxiteOre, ItemBauxiteCobble.class, modid + (bauxiteOre.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(cassititeriteOre, ItemCassititeriteCobble.class, modid + (cassititeriteOre.getUnlocalizedName().substring(5)));
@@ -136,7 +99,7 @@ public class dxm
         GameRegistry.registerBlock(limestoneOre, ItemLimestoneCobble.class, modid + (limestoneOre.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(bauxiteCobble, ItemBauxiteCobble.class, modid + (bauxiteCobble.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(cassititeriteCobble, ItemCassititeriteCobble.class, modid
-                                                                                       + (cassititeriteCobble.getUnlocalizedName().substring(5)));
+                + (cassititeriteCobble.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(galenaCobble, ItemGalenaCobble.class, modid + (galenaCobble.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(hematiteCobble, ItemHematiteCobble.class, modid + (hematiteCobble.getUnlocalizedName().substring(5)));
         GameRegistry.registerBlock(limestoneCobble, ItemLimestoneCobble.class, modid + (limestoneCobble.getUnlocalizedName().substring(5)));

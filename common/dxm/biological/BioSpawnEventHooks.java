@@ -1,4 +1,4 @@
 package dxm.biological;
 
-public class BioSpawnEventHooks
-{}
+public class BioSpawnEventHooks {
+}

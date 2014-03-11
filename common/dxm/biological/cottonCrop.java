@@ -1,4 +1,4 @@
 package dxm.biological;
 
-public class cottonCrop
-{}
+public class cottonCrop {
+}

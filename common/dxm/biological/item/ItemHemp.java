@@ -7,16 +7,13 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class ItemHemp extends Item
-{
-    public ItemHemp(int id)
-    {
+public class ItemHemp extends Item {
+    public ItemHemp(int id) {
         super(id);
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player)
-    {
+    public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
         world.spawnParticle("smoke", player.posX, player.posY, player.posZ, 0.0D, 0.0D, 0.0D);
         world.spawnParticle("smoke", player.posX - 0.3D, player.posY, player.posZ, 0.0D, 0.0D, 0.0D);
         world.spawnParticle("smoke", player.posX, player.posY - 0.3D, player.posZ, 0.0D, 0.0D, 0.0D);

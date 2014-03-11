@@ -1,8 +1,8 @@
 package dxm.machines.block.ore;
 
-import java.util.List;
-import java.util.Random;
-
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import dxm.machines.dxm;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.material.Material;
@@ -11,15 +11,11 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import java.util.List;
+import java.util.Random;
 
-import dxm.machines.dxm;
-
-public class BlockMalachiteOre extends BlockOre
-{
-    public BlockMalachiteOre(int id, Material rock)
-    {
+public class BlockMalachiteOre extends BlockOre {
+    public BlockMalachiteOre(int id, Material rock) {
         super(id);
         setHardness(4.0F);
         setStepSound(Block.soundStoneFootstep);
@@ -29,10 +25,8 @@ public class BlockMalachiteOre extends BlockOre
         setRequiresSelfNotify();
     }
 
-    public int getBlockTextureFromSideAndMetadata(int par1, int par2)
-    {
-        switch (par2)
-        {
+    public int getBlockTextureFromSideAndMetadata(int par1, int par2) {
+        switch(par2) {
             case 0:
                 return 0;
             case 1:
@@ -42,14 +36,12 @@ public class BlockMalachiteOre extends BlockOre
         }
     }
 
-    private void setRequiresSelfNotify()
-    {
+    private void setRequiresSelfNotify() {
         // TODO Auto-generated method stub
     }
 
     @Override
-    public int damageDropped(int rock)
-    {
+    public int damageDropped(int rock) {
         return rock;
     }
 
@@ -57,8 +49,7 @@ public class BlockMalachiteOre extends BlockOre
      * Returns the ID of the items to drop on destruction.
      */
     @Override
-    public int idDropped(int par1, Random par2Random, int par3)
-    {
+    public int idDropped(int par1, Random par2Random, int par3) {
         return dxm.malachiteCobble.blockID;
     }
 
@@ -66,8 +57,7 @@ public class BlockMalachiteOre extends BlockOre
      * Returns the quantity of items to drop on block destruction.
      */
     @Override
-    public int quantityDropped(Random par1Random)
-    {
+    public int quantityDropped(Random par1Random) {
         return 1;
     }
 
@@ -76,27 +66,21 @@ public class BlockMalachiteOre extends BlockOre
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister)
-    {
+    public void registerIcons(IconRegister par1IconRegister) {
         icons = new Icon[4];
-        for (int i = 0; i < icons.length; i++)
-        {
+        for(int i = 0; i < icons.length; i++) {
             icons[i] = par1IconRegister.registerIcon(dxm.modid + ":" + (getUnlocalizedName().substring(5)) + i);
         }
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int par1, int par2)
-    {
-        switch (par2)
-        {
+    public Icon getIcon(int par1, int par2) {
+        switch(par2) {
             case 0:
                 return icons[0];
-            case 1:
-            {
-                switch (par1)
-                {
+            case 1: {
+                switch(par1) {
                     case 0:
                         return icons[1];
                     case 1:
@@ -105,8 +89,7 @@ public class BlockMalachiteOre extends BlockOre
                         return icons[3];
                 }
             }
-            default:
-            {
+            default: {
                 System.out.println("Invalid metadata for" + getUnlocalizedName());
                 return icons[0];
             }
@@ -115,10 +98,8 @@ public class BlockMalachiteOre extends BlockOre
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
-    {
-        for (int i = 0; i < 2; i++)
-        {
+    public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List) {
+        for(int i = 0; i < 2; i++) {
             par3List.add(new ItemStack(par1, 1, i));
         }
     }

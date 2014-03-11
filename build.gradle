@@ -7,8 +7,8 @@ buildscript {
             url = "http://files.minecraftforge.net/maven"
         }
     }
-    dependencies {  
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT' 
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
     }
 }
 
@@ -36,16 +36,16 @@ processResources {
         expand version: version, mcversion: minecraft.version
     }
 
-    from(sourceSets.main.resources.srcDirs) { 
-        exclude '**/*.info' 
+    from(sourceSets.main.resources.srcDirs) {
+        exclude '**/*.info'
     }
 }
 
 jar {
     appendix = 'universal'
     manifest {
-        attributes 'MCVersion' : project.minecraft.version
-        attributes 'Version' : project.version
+        attributes 'MCVersion': project.minecraft.version
+        attributes 'Version': project.version
     }
 }
 

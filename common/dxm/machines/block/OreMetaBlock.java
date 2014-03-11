@@ -1,7 +1,9 @@
 package dxm.machines.block;
 
-import java.util.List;
-
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import dxm.machines.Names;
+import dxm.machines.dxm;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -9,16 +11,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import java.util.List;
 
-import dxm.machines.Names;
-import dxm.machines.dxm;
-
-public class OreMetaBlock extends Block
-{
-    public OreMetaBlock(int id)
-    {
+public class OreMetaBlock extends Block {
+    public OreMetaBlock(int id) {
         super(id, Material.rock);
         setCreativeTab(dxm.tab);
     }
@@ -28,32 +24,26 @@ public class OreMetaBlock extends Block
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister icon)
-    {
+    public void registerIcons(IconRegister icon) {
         icons = new Icon[Names.oreMetaBlock_unlocalizedName.length];
-        for (int i = 0; i < icons.length; i++)
-        {
+        for(int i = 0; i < icons.length; i++) {
             icons[i] = icon.registerIcon(dxm.modid.toLowerCase() + ":" + Names.oreMetaBlock_unlocalizedName[i]);
         }
     }
 
     @Override
-    public Icon getIcon(int side, int meta)
-    {
+    public Icon getIcon(int side, int meta) {
         return icons[meta];
     }
 
     @Override
-    public int damageDropped(int meta)
-    {
+    public int damageDropped(int meta) {
         return meta;
     }
 
     @Override
-    public void getSubBlocks(int id, CreativeTabs tab, List list)
-    {
-        for (int i = 0; i < Names.oreMetaBlock_name.length; i++)
-        {
+    public void getSubBlocks(int id, CreativeTabs tab, List list) {
+        for(int i = 0; i < Names.oreMetaBlock_name.length; i++) {
             list.add(new ItemStack(this, 1, i));
         }
     }

@@ -1,11 +1,9 @@
 package dxm.biological;
 
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.Configuration;
 
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-
-public class BioSpawnConfig
-{
+public class BioSpawnConfig {
     public static boolean canFertilize;
     public static int HempFertileGrowth;
     public static int HempNonFertileGrowth;
@@ -13,8 +11,7 @@ public class BioSpawnConfig
     public static int HempBlockID;
     public static int HempItemID;
 
-    public static void configurate(FMLPreInitializationEvent event)
-    {
+    public static void configurate(FMLPreInitializationEvent event) {
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
         canFertilize = Boolean.parseBoolean(config.get("Growthrate and Fertilization", "Bonemeal Fertilization:", "true").getString());
