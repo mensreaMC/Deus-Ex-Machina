@@ -1,0 +1,33 @@
+# items
+item.squeeItem.name=Squee Item
+item.bauxiteCobble.name=Bauxite Cobble
+item.cassititeriteCobble.name=Cassititerite Cobble
+item.galenaCobble.name=Galena Cobble
+item.hematiteCobble.name=Hematite Cobble
+item.limestoneCobble.name=Limestone Cobble
+
+# blocks
+tile.fertilizedBlock.name=Fertilized Block
+tile.tilledfertilizedBlock.name=Tilled Fertilized Block
+tile.squeeBlock.name=Squee Block
+tile.bauxiteOre.name=Bauxite Ore
+tile.cassititeriteOre.name=Cassititerite Ore
+tile.galenaOre.name=Galena Ore
+tile.hematiteOre.name=Hematite Ore
+tile.limestoneOre.name=Limestone Ore
+tile.bauxiteCobble.name=Bauxite Cobble
+tile.cassititeriteCobble.name=Cassititerite Cobble
+tile.galenaCobble.name=Galena Cobble
+tile.hematiteCobble.name=Hematite Cobble
+tile.limestoneCobble.name=Limestone Cobble
+tile.malachiteOre.name=Malachite Ore
+tile.malachiteCobble.name=Malachite Cobble
+tile.coalOre.name=Coal Ore
+tile.coalCobble.name=Coal Cobble
+tile.monaziteSand.name=Monazite Sand
+tile.nativegoldOre.name=Native Gold Ore
+tile.nativegoldCobble.name=Native Gold Cobble
+tile.sulfurOre.name=Sulfur Ore
+tile.sulfurCobble.name=Sulfur Cobble
+tile.uraniniteOre.name=Uraninite Ore
+tile.uraniniteCobble.name=Uraninite Cobble
