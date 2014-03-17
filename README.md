@@ -86,38 +86,40 @@ A.supporters are people who can spread the word and be advocates for the project
 
 So far the project has accumulated a handful of personnel who have pledged to work on things to varying degrees. I will list what people have done as well as what they have pledged to do.
 
-I.Mensrea (designer, spriter)
-A.design docs, sprites
-B.refining designs, making sprites
+I.Mensrea (designer, spriter)                                                                             
+A.design docs, sprites                                                                                    
+B.refining designs, making sprites                                                                        
 
-II.CrafterOfMines57 (programmer)
-A.consultant, programmed windmills, tools, fuses
-B.working on UE implementation
+II.CrafterOfMines57 (programmer)                                                                          
+A.consultant, programmed windmills, tools, fuses                                                          
+B.working on UE implementation                                                                            
 
-III.Laserbeam_nik (programmer)
-A.basics, some worldgen, adding blocks, copy/pasta
-B.developing programming knowledge
+III.Laserbeam_nik (programmer)                                                                            
+A.basics, some worldgen, adding blocks, copy/pasta                                                        
+B.developing programming knowledge                                                                        
 
-IV.Captain_Shadows (programmer)
-A.consultant, cleaned up lasers code and made it workable
-B.assisting laser via skype, cleaning up code
+IV.Captain_Shadows (programmer)                                                                           
+A.consultant, cleaned up lasers code and made it workable                                                 
+B.assisting laser via skype, cleaning up code                                                             
 
-V.Deantheftexpress (programmer)
-A.a dancing queen, only 17
+V.Deantheftexpress (programmer)                                                                           
+A.a dancing queen, only 17                                                                                
+
+VI.Special thanks to frostbyte of futurecraft fame, two from IC forums, and everyone who took the time/had the decency to humor my usually inane questions or help me network with others.
 
                                                      **NAME CHANGE**
                                                   
 Deus Ex Machina may not be the best name as it is sort of cliche and does not say much about the mod. The following names have been picked as possible alternatives. If you have any suggestions/opinions please let me know by email or on skype.
 
-I.blood and iron
-A.pro: sounds cool and makes sense. catches the eye
-B.con: violent connotations that may distort the mods image
+I.blood and iron                                                                                          
+A.pro: sounds cool and makes sense. catches the eye                                                       
+B.con: violent connotations that may distort the mods image                                               
 
-II.rise of humanity (least votes)
-A.pro: sounds cool and makes sense. describes the mod perfectly
-B.con: sounds a lot like rise of nations, age of empires, X of Y cliche
+II.rise of humanity (least votes)                                                                         
+A.pro: sounds cool and makes sense. describes the mod perfectly                                           
+B.con: sounds a lot like rise of nations, age of empires, X of Y cliche                                   
 
-III.imperium populi (most votes)
-A.pro: sounds cool and makes sense. "empire of man"
-B.con: latin is confusing to many people. doesnt make sense without "et"
+III.imperium populi (most votes)                                                                          
+A.pro: sounds cool and makes sense. "empire of man"                                                       
+B.con: latin is confusing to many people. doesnt make sense without "et"                                  
        
