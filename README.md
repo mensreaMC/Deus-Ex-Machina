@@ -41,20 +41,26 @@ I.Mod design philosophies and general mod overview
 (make sure you check out the general mod overview section of the article as it offers a more comprehensive rundown, the rest of the document is kind of the mission statement)
 
 II.The DXM Experience
+(the end goal for the project - to craft an alternative experience to vanilla MC)
 
-III.Workshop system and blocks
+III.Workshop system and workshop block
 
-IV.Labor system and blocks
+IV.Labor system and housing/administration blocks
 
 V.The peoples tools!
 
 VI.Power plant/machine general blocks
 
-VII.Mining machines and ore processing overview (you may need to consult Worldgen (mineral) alongside that)
+VII.Mining machines and ore processing overview 
+(you may need to consult Worldgen (mineral) alongside that)
 
-IIX.any documents as you now likely have a firm understanding of what we are trying to achieve, but I recomend the Sub-critical Steam Plant document for a good start on how we will approach power generation
+IIX.Sub-critical steam plants
+(gives you a good idea of how power gen will work)
+
+IX.any documents as you now likely have a firm understanding of what we are trying to achieve, but I recomend the Sub-critical Steam Plant document for a good start on how we will approach power generation
 
                                                   **THE PITCH PHASE**
+                                    **DATE WITHHELD UNTIL WORLDGEN/UE IMPLEMENTATION**
                                                     
 After consulting some people in regards to how long things will take I decided to scale the number, depth and scope of features back. The goal is to get the mod down to barebones for the pitch, which will involve me begging and groveling for some modders on the minecraft forums and anywhere else I can make a post on. For more info on what is the first release will hopefully look like consult the article titled "First release". For the first release we will be needing the following personel:
 
@@ -76,10 +82,42 @@ B.those guys that make big posts on tech mod forums about the right way to do te
 V.supporters                                                                                              
 A.supporters are people who can spread the word and be advocates for the project. people who can keep pitch threads bumped and offer the programmers, spriters and co-designers vocal and emotional support.
 
+                                                  **PERSONNEL**  
 
-                                      I am aiming to make the pitch on ????
-                                                    
-        
+So far the project has accumulated a handful of personnel who have pledged to work on things to varying degrees. I will list what people have done as well as what they have pledged to do.
 
+I.Mensrea (designer, spriter)
+-design docs, sprites
+-refining designs, making sprites
 
+II.CrafterOfMines57 (programmer)
+-consultant, programmed windmills, tools, fuses
+-working on UE implementation
 
+III.Laserbeam_nik (programmer)
+-basics, some worldgen, adding blocks, copy/pasta
+-developing programming knowledge
+
+IV.Captain_Shadows (programmer)
+-consultant, cleaned up lasers code and made it workable
+-assisting laser via skype, cleaning up code
+
+V.Deantheftexpress (programmer)
+-a dancing queen, only 17
+
+                                                  **NAME CHANGE**
+                                                  
+Deus Ex Machina may not be the best name as it is sort of cliche and does not say much about the mod. The following names have been picked as possible alternatives. If you have any suggestions/opinions please let me know by email or on skype.
+
+I.blood and iron
+pro: sounds cool and makes sense. catches the eye
+con: violent connotations that may distort the mods image
+
+II.rise of humanity (least votes)
+pro: sounds cool and makes sense. describes the mod perfectly
+con: sounds a lot like rise of nations, age of empires, X of Y cliche
+
+III.imperium populi (most votes)
+pro: sounds cool and makes sense.
+con: latin is confusing to many people
+       
