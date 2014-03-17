@@ -57,10 +57,10 @@ VII.Mining machines and ore processing overview
 IIX.Sub-critical steam plants
 (gives you a good idea of how power gen will work)
 
-IX.any documents as you now likely have a firm understanding of what we are trying to achieve, but I recomend the Sub-critical Steam Plant document for a good start on how we will approach power generation
+You will likely have a firm idea of what we are trying to achieve if you actually read those documents.
 
-                                                  **THE PITCH PHASE**
-                                    **DATE WITHHELD UNTIL WORLDGEN/UE IMPLEMENTATION**
+                                                     **THE PITCH PHASE**
+                                       **DATE WITHHELD UNTIL WORLDGEN/UE IMPLEMENTATION**
                                                     
 After consulting some people in regards to how long things will take I decided to scale the number, depth and scope of features back. The goal is to get the mod down to barebones for the pitch, which will involve me begging and groveling for some modders on the minecraft forums and anywhere else I can make a post on. For more info on what is the first release will hopefully look like consult the article titled "First release". For the first release we will be needing the following personel:
 
@@ -82,42 +82,42 @@ B.those guys that make big posts on tech mod forums about the right way to do te
 V.supporters                                                                                              
 A.supporters are people who can spread the word and be advocates for the project. people who can keep pitch threads bumped and offer the programmers, spriters and co-designers vocal and emotional support.
 
-                                                  **PERSONNEL**  
+                                                     **PERSONNEL**  
 
 So far the project has accumulated a handful of personnel who have pledged to work on things to varying degrees. I will list what people have done as well as what they have pledged to do.
 
 I.Mensrea (designer, spriter)
--design docs, sprites
--refining designs, making sprites
+A.design docs, sprites
+B.refining designs, making sprites
 
 II.CrafterOfMines57 (programmer)
--consultant, programmed windmills, tools, fuses
--working on UE implementation
+A.consultant, programmed windmills, tools, fuses
+B.working on UE implementation
 
 III.Laserbeam_nik (programmer)
--basics, some worldgen, adding blocks, copy/pasta
--developing programming knowledge
+A.basics, some worldgen, adding blocks, copy/pasta
+B.developing programming knowledge
 
 IV.Captain_Shadows (programmer)
--consultant, cleaned up lasers code and made it workable
--assisting laser via skype, cleaning up code
+A.consultant, cleaned up lasers code and made it workable
+B.assisting laser via skype, cleaning up code
 
 V.Deantheftexpress (programmer)
--a dancing queen, only 17
+A.a dancing queen, only 17
 
-                                                  **NAME CHANGE**
+                                                     **NAME CHANGE**
                                                   
 Deus Ex Machina may not be the best name as it is sort of cliche and does not say much about the mod. The following names have been picked as possible alternatives. If you have any suggestions/opinions please let me know by email or on skype.
 
 I.blood and iron
-pro: sounds cool and makes sense. catches the eye
-con: violent connotations that may distort the mods image
+A.pro: sounds cool and makes sense. catches the eye
+B.con: violent connotations that may distort the mods image
 
 II.rise of humanity (least votes)
-pro: sounds cool and makes sense. describes the mod perfectly
-con: sounds a lot like rise of nations, age of empires, X of Y cliche
+A.pro: sounds cool and makes sense. describes the mod perfectly
+B.con: sounds a lot like rise of nations, age of empires, X of Y cliche
 
 III.imperium populi (most votes)
-pro: sounds cool and makes sense.
-con: latin is confusing to many people
+A.pro: sounds cool and makes sense. "empire of man"
+B.con: latin is confusing to many people. doesnt make sense without "et"
        
