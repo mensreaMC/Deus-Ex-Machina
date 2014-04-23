@@ -21,16 +21,16 @@ public class EventManager implements IWorldGenerator {
     }
 
     private void generateSurface(World world, Random random, int x, int z) {
-        addOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 90, random.nextInt(3), 54, 64);
+        addOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 50, random.nextInt(1), 54, 64);
         addOreSpawn(MaterialTypes.CASSITITERITE.getOre(), world, random, x, z, 16, 16, 15, random.nextInt(3), 1, 64);
         addOreSpawn(MaterialTypes.COAL.getOre(), world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 64);
         addOreSpawn(MaterialTypes.GALENA.getOre(), world, random, x, z, 16, 16, 15, random.nextInt(3), 1, 64);
         addOreSpawn(MaterialTypes.HEMATITE.getOre(), world, random, x, z, 16, 16, 40, random.nextInt(3), 1, 64);
-        addOreSpawn(MaterialTypes.LIMESTONE.getOre(), world, random, x, z, 16, 16, 90, random.nextInt(3), 1, 64);
+        addOreSpawn(MaterialTypes.LIMESTONE.getOre(), world, random, x, z, 16, 16, 50, random.nextInt(1), 1, 64);
         addOreSpawn(MaterialTypes.MALACHITE.getOre(), world, random, x, z, 16, 16, 15, random.nextInt(3), 1, 64);
-        //addOreSpawn(MaterialTypes.MONAZITE.getOre(), world, random, x, z, 16, 16, 90, random.nextInt(3), 54, 74);
+        //addOreSpawn(MaterialTypes.MONAZITE.getOre(), world, random, x, z, 16, 16, 90, random.nextInt(1), 54, 74);
         addOreSpawn(MaterialTypes.NATIVEGOLD.getOre(), world, random, x, z, 16, 16, 5, random.nextInt(3), 1, 64);
-        addOreSpawn(MaterialTypes.SULFUR.getOre(), world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 32);
+        addOreSpawn(MaterialTypes.SULFUR.getOre(), world, random, x, z, 16, 16, 50, random.nextInt(1), 1, 32);
         addOreSpawn(MaterialTypes.URANINITE.getOre(), world, random, x, z, 16, 16, 5, random.nextInt(3), 1, 64);
     }
     /**

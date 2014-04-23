@@ -17,7 +17,7 @@ public class ModGravelBlock extends Block {
     private void setupBlock(String name) {
         setUnlocalizedName(name);
         setCreativeTab(DeusXMachina.instance.tab);
-        setTextureName(Archive.MOD_ID + ":" + name);
+        setTextureName(Archive.MOD_ID + ":gravel/" + name);
         GameRegistry.registerBlock(this, Archive.MOD_ID + "." + name);
     }
 
