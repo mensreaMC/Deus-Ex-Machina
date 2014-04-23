@@ -8,7 +8,6 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import dxm.blocks.MaterialTypes;
 import dxm.blocks.ModBlocks;
-import dxm.mod.EventManager;
 import dxm.utils.library.Archive;
 import net.minecraft.creativetab.CreativeTabs;
 

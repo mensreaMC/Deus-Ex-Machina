@@ -6,18 +6,18 @@ import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class ModCobbleBlock extends Block {
+public class ModGravelBlock extends Block {
 
-    public ModCobbleBlock(int id, String name) {
-        super(id, Material.rock);
+    public ModGravelBlock(int id, String name) {
+        super(id, Material.sand);
         setupBlock(name);
-        setStepSound(Block.soundStoneFootstep);
+        setStepSound(Block.soundGravelFootstep);
     }
 
     private void setupBlock(String name) {
         setUnlocalizedName(name);
         setCreativeTab(DeusXMachina.instance.tab);
-        setTextureName(Archive.MOD_ID + ":cobble/" + name);
+        setTextureName(Archive.MOD_ID + ":" + name);
         GameRegistry.registerBlock(this, Archive.MOD_ID + "." + name);
     }
 

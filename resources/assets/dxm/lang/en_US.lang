@@ -1,21 +1,13 @@
 # creative tab
-itemGroup.DXM=Deus Ex Machina
-
-# items
-item.squeeItem.name=Squee Item
-item.bauxiteCobble.name=Bauxite Cobble
-item.cassititeriteCobble.name=Cassititerite Cobble
-item.galenaCobble.name=Galena Cobble
-item.hematiteCobble.name=Hematite Cobble
-item.limestoneCobble.name=Limestone Cobble
+itemGroup.dxm=Deus Ex Machina
 
 # blocks
-tile.bauxiteOre.world.name=Bauxite Ore
-tile.cassititeriteOre.world.name=Cassititerite Ore
-tile.galenaOre.world.name=Galena Ore
-tile.hematiteOre.world.name=Hematite Ore
-tile.limestoneOre.world.name=Limestone Ore
-tile.malachiteOre.world.name=Malachite Ore
+tile.bauxiteOre.name=Bauxite Ore
+tile.cassititeriteOre.name=Cassititerite Ore
+tile.galenaOre.name=Galena Ore
+tile.hematiteOre.name=Hematite Ore
+tile.limestoneOre.name=Limestone Ore
+tile.malachiteOre.name=Malachite Ore
 tile.fertilizedBlock.name=Fertilized Block
 tile.tilledfertilizedBlock.name=Tilled Fertilized Block
 tile.squeeBlock.name=Squee Block

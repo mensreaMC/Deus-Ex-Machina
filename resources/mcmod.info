@@ -2,14 +2,14 @@
   {
     "modid": "dxm",
     "name": "Deus Ex Machina",
-    "description": "SOMETHING TO BE FILLED IN",
-    "credits": "PEOPLE",
+    "description": "The human experience, bitchez!",
+    "credits": "Mensrea, CaptainShadows, Laserbeam_Nik",
     "logoFile": "/assets/dxm/textures/logo.png",
-    "version": "${version}",
-    "mcversion": "${mcversion}",
+    "version": "Alpha .000001",
+    "mcversion": "1.6.4",
     "url": "https://github.com/mensreaMC/Deus-Ex-Machina",
     "authors": [
-      "AUTHORS"
+      "Mensrea, CaptainShadows, Laserbeam_Nik"
     ]
   }
 ]
