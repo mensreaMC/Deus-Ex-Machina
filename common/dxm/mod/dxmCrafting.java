@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class dxmCrafting {
+public class DXMCrafting {
     public static void addRecipes() {
     }
 }

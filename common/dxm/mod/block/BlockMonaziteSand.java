@@ -2,7 +2,8 @@ package dxm.mod.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import dxm.mod.dxm;
+import dxm.DeusXMachina;
+import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
@@ -36,7 +37,7 @@ public class BlockMonaziteSand extends BlockSand {
     public void registerIcons(IconRegister par1IconRegister) {
         icons = new Icon[4];
         for(int i = 0; i < icons.length; i++) {
-            icons[i] = par1IconRegister.registerIcon(dxm.modid + ":" + (getUnlocalizedName().substring(5)) + i);
+            icons[i] = par1IconRegister.registerIcon(Archive.MOD_ID  + ":" + (getUnlocalizedName().substring(5)) + i);
         }
     }
 

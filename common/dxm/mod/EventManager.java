@@ -1,6 +1,9 @@
 package dxm.mod;
 
 import cpw.mods.fml.common.IWorldGenerator;
+import dxm.DeusXMachina;
+import dxm.blocks.MaterialTypes;
+import dxm.blocks.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -14,24 +17,22 @@ public class EventManager implements IWorldGenerator {
         switch(world.provider.dimensionId) {
             case 0:
                 generateSurface(world, random, chunkX * 16, chunkZ * 16);
+                break;
         }
     }
 
-    private void generateEnd(World world, Random random, int x, int z) {
-    }
-
     private void generateSurface(World world, Random random, int x, int z) {
-        addOreSpawn(dxm.bauxiteOre, world, random, x, z, 16, 16, 40 + random.nextInt(3), 5, 1, 64);
-        addOreSpawn(dxm.cassititeriteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.coalOre, world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.galenaOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.hematiteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.limestoneOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.malachiteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.monaziteSand, world, random, x, z, 16, 16, 90, random.nextInt(3), 58, 64);
-        addOreSpawn(dxm.nativegoldOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.sulfurOre, world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.uraniniteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        addOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 40 + random.nextInt(3), 5, 1, 64);
+        addOreSpawn(MaterialTypes.CASSITITERITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        //addOreSpawn(ModBlocks.coalOre, world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 64);
+        addOreSpawn(MaterialTypes.GALENA.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        addOreSpawn(MaterialTypes.HEMATITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        addOreSpawn(MaterialTypes.LIMESTONE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        //addOreSpawn(ModBlocks.malachiteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        //addOreSpawn(ModBlocks.monaziteSand, world, random, x, z, 16, 16, 90, random.nextInt(3), 58, 64);
+        //addOreSpawn(ModBlocks.nativegoldOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        //addOreSpawn(ModBlocks.sulfurOre, world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 64);
+        //addOreSpawn(ModBlocks.uraniniteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
     }
     /**
      * Adds an Ore Spawn to Minecraft. Simply register all Ores to spawn with this method in your Generation method in your IWorldGeneration

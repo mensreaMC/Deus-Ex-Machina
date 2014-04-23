@@ -2,7 +2,9 @@ package dxm.mod.block.ore;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import dxm.mod.dxm;
+import dxm.DeusXMachina;
+import dxm.blocks.ModBlocks;
+import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.material.Material;
@@ -50,7 +52,7 @@ public class BlockCassititeriteOre extends BlockOre {
      */
     @Override
     public int idDropped(int par1, Random par2Random, int par3) {
-        return dxm.cassititeriteCobble.blockID;
+        return ModBlocks.cassititeriteCobble.blockID;
     }
 
     /**
@@ -69,7 +71,7 @@ public class BlockCassititeriteOre extends BlockOre {
     public void registerIcons(IconRegister par1IconRegister) {
         icons = new Icon[5];
         for(int i = 0; i < icons.length; i++) {
-            icons[i] = par1IconRegister.registerIcon(dxm.modid + ":" + (getUnlocalizedName().substring(5)) + i);
+            icons[i] = par1IconRegister.registerIcon(Archive.MOD_ID  + ":" + (getUnlocalizedName().substring(5)) + i);
         }
     }
 
