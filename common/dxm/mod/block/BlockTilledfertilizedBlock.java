@@ -21,7 +21,6 @@ public class BlockTilledfertilizedBlock extends Block {
         setUnlocalizedName("tilledfertilizedBlock");
         setCreativeTab(CreativeTabs.tabBlock);
         setCreativeTab(CreativeTabs.tabBlock);
-        setRequiresSelfNotify();
     }
 
     public int getBlockTextureFromSideAndMetadata(int par1, int par2) {
@@ -33,10 +32,6 @@ public class BlockTilledfertilizedBlock extends Block {
             default:
                 return 0;
         }
-    }
-
-    private void setRequiresSelfNotify() {
-        // TODO Auto-generated method stub
     }
 
     @Override

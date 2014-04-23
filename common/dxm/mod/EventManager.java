@@ -21,16 +21,16 @@ public class EventManager implements IWorldGenerator {
     }
 
     private void generateSurface(World world, Random random, int x, int z) {
-        addOreSpawn(dxm.bauxiteOre, world, random, x, z, 16, 16, 25 + random.nextInt(3), 5, 1, 64);
+        addOreSpawn(dxm.bauxiteOre, world, random, x, z, 16, 16, 40 + random.nextInt(3), 5, 1, 64);
         addOreSpawn(dxm.cassititeriteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.coalOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        addOreSpawn(dxm.coalOre, world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 64);
         addOreSpawn(dxm.galenaOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
         addOreSpawn(dxm.hematiteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
         addOreSpawn(dxm.limestoneOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
         addOreSpawn(dxm.malachiteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.monaziteSand, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        addOreSpawn(dxm.monaziteSand, world, random, x, z, 16, 16, 90, random.nextInt(3), 58, 64);
         addOreSpawn(dxm.nativegoldOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(dxm.sulfurOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
+        addOreSpawn(dxm.sulfurOre, world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 64);
         addOreSpawn(dxm.uraniniteOre, world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
     }
     /**

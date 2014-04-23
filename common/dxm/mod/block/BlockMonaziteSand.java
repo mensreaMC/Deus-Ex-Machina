@@ -17,7 +17,7 @@ public class BlockMonaziteSand extends BlockSand {
     public BlockMonaziteSand(int id, Material rock) {
         super(id);
         setHardness(4.0F);
-        setStepSound(Block.soundStoneFootstep);
+        setStepSound(Block.soundSandFootstep);
         setUnlocalizedName("monaziteSand");
         setCreativeTab(CreativeTabs.tabBlock);
         setCreativeTab(CreativeTabs.tabBlock);
