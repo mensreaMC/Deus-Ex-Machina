@@ -18,8 +18,8 @@ public class DeusXMachina {
     @Mod.Instance(Archive.MOD_ID)
     public static DeusXMachina instance;
 
-    public CreativeTabs tab = new CreativeTabs(Archive.MOD_ID);
-    public EventManager eventmanager = new EventManager();
+    public final CreativeTabs tab = new CreativeTabs(Archive.MOD_ID);
+    public final EventManager eventmanager = new EventManager();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){

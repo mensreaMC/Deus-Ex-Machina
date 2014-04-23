@@ -11,16 +11,14 @@ public class ItemMonaziteSand extends ItemBlock {
 
     @Override
     public String getUnlocalizedName(ItemStack itemstack) {
-        String name = "";
+        String name;
         switch(itemstack.getItemDamage()) {
-            case 0: {
+            case 0:
                 name = "world";
                 break;
-            }
-            case 1: {
+            case 1:
                 name = "nether";
                 break;
-            }
             default:
                 name = "broken";
         }
