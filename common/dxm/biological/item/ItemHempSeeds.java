@@ -11,7 +11,6 @@ public class ItemHempSeeds extends ItemSeeds {
         setTextureName("/mensrea_dxm/textures/items/hempSeed.png");
         setCreativeTab(CreativeTabs.tabMisc);
         setUnlocalizedName("hempSeed");
-        // setIconIndex(14);
     }
 
     @Override
