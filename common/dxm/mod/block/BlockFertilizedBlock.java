@@ -23,7 +23,6 @@ public class BlockFertilizedBlock extends BlockOre {
         setBlockName("fertilizedBlock");
         setCreativeTab(CreativeTabs.tabBlock);
         setCreativeTab(CreativeTabs.tabBlock);
-        setRequiresSelfNotify();
     }
 
     public int getBlockTextureFromSideAndMetadata(int par1, int par2) {
@@ -37,29 +36,12 @@ public class BlockFertilizedBlock extends BlockOre {
         }
     }
 
-    private void setRequiresSelfNotify() {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public int damageDropped(int rock) {
-        return rock;
-    }
-
     /**
      * Returns the ID of the items to drop on destruction.
      */
     @Override
     public int idDropped(int par1, Random par2Random, int par3) {
         return ModBlocks.fertilizedBlock.blockID;
-    }
-
-    /**
-     * Returns the quantity of items to drop on block destruction.
-     */
-    @Override
-    public int quantityDropped(Random par1Random) {
-        return 1;
     }
 
     @SideOnly(Side.CLIENT)

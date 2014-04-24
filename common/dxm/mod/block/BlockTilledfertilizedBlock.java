@@ -37,25 +37,12 @@ public class BlockTilledfertilizedBlock extends Block {
         }
     }
 
-    @Override
-    public int damageDropped(int rock) {
-        return rock;
-    }
-
     /**
      * Returns the ID of the items to drop on destruction.
      */
     @Override
     public int idDropped(int par1, Random par2Random, int par3) {
         return ModBlocks.fertilizedBlock.blockID;
-    }
-
-    /**
-     * Returns the quantity of items to drop on block destruction.
-     */
-    @Override
-    public int quantityDropped(Random par1Random) {
-        return 1;
     }
 
     @SideOnly(Side.CLIENT)
@@ -72,7 +59,7 @@ public class BlockTilledfertilizedBlock extends Block {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int par1, int par2) {
+    public IIcon getIcon(int par1, int par2) {
         switch(par2) {
             case 0:
                 return icons[0];
