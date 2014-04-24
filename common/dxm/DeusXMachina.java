@@ -19,13 +19,14 @@ public class DeusXMachina {
     @Mod.Instance(Archive.MOD_ID)
     public static DeusXMachina instance;
 
+    public final EventManager eventmanager = new EventManager();
+
     public final CreativeTabs tab = (new CreativeTabs(Archive.MOD_ID) {
         @SideOnly(Side.CLIENT)
         public Item getTabIconItem() {
             return Item.getItemFromBlock(Blocks.cobblestone);
         }
     });
-    public final EventManager eventmanager = new EventManager();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {

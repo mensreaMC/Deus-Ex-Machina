@@ -6,9 +6,11 @@ import dxm.blocks.ModBlocks;
 import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.Icon;
 
 import java.util.List;
@@ -18,8 +20,8 @@ public class BlockTilledfertilizedBlock extends Block {
     public BlockTilledfertilizedBlock(int id, Material rock) {
         super(rock);
         setHardness(4.0F);
-        setStepSound(Block.soundStoneFootstep);
-        setUnlocalizedName("tilledfertilizedBlock");
+        setStepSound(Block.soundTypeStone);
+        setBlockName("tilledfertilizedBlock");
         setCreativeTab(CreativeTabs.tabBlock);
         setCreativeTab(CreativeTabs.tabBlock);
     }
@@ -57,14 +59,14 @@ public class BlockTilledfertilizedBlock extends Block {
     }
 
     @SideOnly(Side.CLIENT)
-    private Icon[] icons;
+    private IIcon[] icons;
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister) {
-        icons = new Icon[5];
+    public void registerBlockIcons(IIconRegister register) {
+        icons = new IIcon[5];
         for(int i = 0; i < icons.length; i++) {
-            icons[i] = par1IconRegister.registerIcon(Archive.MOD_ID + ":" + (getUnlocalizedName().substring(5)) + i);
+            icons[i] = register.registerIcon(Archive.MOD_ID + ":" + (getUnlocalizedName().substring(5)) + i);
         }
     }
 
