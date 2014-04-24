@@ -1,27 +1,24 @@
 package dxm.blocks;
 
+import dxm.mod.block.FertilizedBlock;
+import dxm.mod.block.BlockMonaziteSand;
+import dxm.mod.block.TilledFertilizedBlock;
 import net.minecraft.block.Block;
 
 public class ModBlocks {
 
     public static Block fertilizedBlock;
-    public static Block tilledfertilizedBlock;
+    public static Block tilledFertilizedBlock;
     public static Block monaziteSand;
-
-    private static int id = 500;
 
     public static void setup() {
         MaterialTypes.setup();
-        //monaziteSand = new BlockMonaziteSand(517, Material.sand).setUnlocalizedName("monaziteSand").setCreativeTab(tab);
-        //fertilizedBlock = new BlockFertilizedBlock(524, Material.rock).setUnlocalizedName("fertilizedBlock").setCreativeTab(tab);
-        //tilledfertilizedBlock = new BlockTilledfertilizedBlock(525, Material.rock).setUnlocalizedName("tilledfertilizedBlock").setCreativeTab(tab);
+        monaziteSand = new BlockMonaziteSand();
+        fertilizedBlock = new FertilizedBlock();
+        tilledFertilizedBlock = new TilledFertilizedBlock();
 
         //GameRegistry.registerBlock(fertilizedBlock, ItemFertilizedBlock.class, modid + (fertilizedBlock.getUnlocalizedName().substring(5)));
-        //GameRegistry.registerBlock(tilledfertilizedBlock, ItemTilledfertilizedBlock.class, modid + (tilledfertilizedBlock.getUnlocalizedName().substring(5)));
+        //GameRegistry.registerBlock(tilledFertilizedBlock, ItemTilledfertilizedBlock.class, modid + (tilledFertilizedBlock.getUnlocalizedName().substring(5)));
         //GameRegistry.registerBlock(monaziteSand, ItemMonaziteSand.class, modid + (monaziteSand.getUnlocalizedName().substring(5)));
-    }
-
-    public static int getID() {
-        return id++;
     }
 }
