@@ -21,7 +21,7 @@ public class ModBlocks {
         //GameRegistry.registerBlock(monaziteSand, ItemMonaziteSand.class, modid + (monaziteSand.getUnlocalizedName().substring(5)));
     }
 
-    public static int getID(){
+    public static int getID() {
         return id++;
     }
 }

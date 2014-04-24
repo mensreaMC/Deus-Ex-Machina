@@ -2,7 +2,6 @@ package dxm.mod.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import dxm.DeusXMachina;
 import dxm.blocks.ModBlocks;
 import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
@@ -65,7 +64,7 @@ public class BlockTilledfertilizedBlock extends Block {
     public void registerIcons(IconRegister par1IconRegister) {
         icons = new Icon[5];
         for(int i = 0; i < icons.length; i++) {
-            icons[i] = par1IconRegister.registerIcon(Archive.MOD_ID  + ":" + (getUnlocalizedName().substring(5)) + i);
+            icons[i] = par1IconRegister.registerIcon(Archive.MOD_ID + ":" + (getUnlocalizedName().substring(5)) + i);
         }
     }
 
