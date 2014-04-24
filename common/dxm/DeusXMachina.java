@@ -10,6 +10,7 @@ import dxm.blocks.MaterialTypes;
 import dxm.blocks.ModBlocks;
 import dxm.utils.library.Archive;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.Configuration;
 
 @Mod(modid = Archive.MOD_ID)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -20,10 +21,12 @@ public class DeusXMachina {
 
     public final CreativeTabs tab = new CreativeTabs(Archive.MOD_ID);
     public final EventManager eventmanager = new EventManager();
+    public Configuration config;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){
-        MaterialTypes.setup();
+        config = new Configuration(event.getSuggestedConfigurationFile(), true);
+        ModBlocks.setup();
     }
 
     @EventHandler

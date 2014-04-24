@@ -8,17 +8,20 @@ import net.minecraft.block.material.Material;
 
 public class ModGravelBlock extends Block {
 
-    public ModGravelBlock(int id, String name) {
-        super(id, Material.sand);
-        setupBlock(name);
+    MaterialTypes type;
+
+    public ModGravelBlock(MaterialTypes type) {
+        super(DeusXMachina.instance.config.getBlock(type.toOre(), ModBlocks.getID()).getInt(), Material.sand);
+        this.type = type;
+        setupBlock();
         setStepSound(Block.soundGravelFootstep);
     }
 
-    private void setupBlock(String name) {
-        setUnlocalizedName(name);
+    private void setupBlock() {
+        setUnlocalizedName(type.toGravel());
         setCreativeTab(DeusXMachina.instance.tab);
-        setTextureName(Archive.MOD_ID + ":gravel/" + name);
-        GameRegistry.registerBlock(this, Archive.MOD_ID + "." + name);
+        setTextureName(Archive.MOD_ID + ":gravel/" + type.toGravel());
+        GameRegistry.registerBlock(this, Archive.MOD_ID + "." + type.toGravel());
     }
 
 

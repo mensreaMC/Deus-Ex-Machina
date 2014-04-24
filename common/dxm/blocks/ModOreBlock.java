@@ -7,18 +7,28 @@ import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
 
+import java.util.Random;
+
 public class ModOreBlock extends BlockOre {
 
-    public ModOreBlock(int id, String name) {
-        super(id);
-        setupBlock(name);
+    MaterialTypes type;
+
+    public ModOreBlock(MaterialTypes type) {
+        super(DeusXMachina.instance.config.getBlock(type.toOre(), ModBlocks.getID()).getInt());
+        this.type = type;
+        setupBlock();
         setStepSound(Block.soundStoneFootstep);
     }
 
-    private void setupBlock(String name) {
-        setUnlocalizedName(name);
+    private void setupBlock() {
+        setUnlocalizedName(type.toOre());
         setCreativeTab(DeusXMachina.instance.tab);
-        setTextureName(Archive.MOD_ID + ":ore/" + name);
-        GameRegistry.registerBlock(this, Archive.MOD_ID + "." + name);
+        setTextureName(Archive.MOD_ID + ":ore/" + type.toOre());
+        GameRegistry.registerBlock(this, Archive.MOD_ID + "." + type.toOre());
+    }
+
+    @Override
+    public int idDropped(int par1, Random par2Random, int par3) {
+        return type.getCobble().blockID;
     }
 }

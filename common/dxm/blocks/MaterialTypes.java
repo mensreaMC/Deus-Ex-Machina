@@ -14,18 +14,23 @@ public enum MaterialTypes {
     NATIVEGOLD(1.0F),
     SULFUR(0.5F),
     URANINITE(1.0F);
-    
-    private final Block cobble;
-    private final Block ore;
-    private final Block gravel;
 
-    MaterialTypes(float hardness){
-        ore = new ModOreBlock(ModBlocks.ID++, toOre()).setHardness(hardness);
-        cobble = new ModCobbleBlock(ModBlocks.ID++, toCobble()).setHardness(hardness / 2);
-        gravel = new ModGravelBlock(ModBlocks.ID++, toGravel()).setHardness(hardness / 3);
+    private Block cobble;
+    private Block ore;
+    private Block gravel;
+    private final float hardness;
+
+    MaterialTypes(float hardness) {
+        this.hardness = hardness;
     }
 
-    public static void setup(){}
+    public static void setup() {
+        for(MaterialTypes mat : MaterialTypes.values()) {
+            mat.ore = new ModOreBlock(mat).setHardness(mat.hardness);
+            mat.cobble = new ModCobbleBlock(mat).setHardness(mat.hardness / 2);
+            mat.gravel = new ModGravelBlock(mat).setHardness(mat.hardness / 3);
+        }
+    }
 
     public Block getOre() {
         return ore;
@@ -34,7 +39,7 @@ public enum MaterialTypes {
     public Block getCobble() {
         return cobble;
     }
-    
+
     public Block getGravel() {
         return gravel;
     }
@@ -44,11 +49,11 @@ public enum MaterialTypes {
     }
 
     public String toCobble() {
-        return toString()+ "Cobble";
+        return toString() + "Cobble";
     }
 
     public String toGravel() {
-        return toString()+ "Gravel";
+        return toString() + "Gravel";
     }
 
     @Override
