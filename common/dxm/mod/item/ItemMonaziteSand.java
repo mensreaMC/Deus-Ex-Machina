@@ -1,11 +1,12 @@
 package dxm.mod.item;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 public class ItemMonaziteSand extends ItemBlock {
-    public ItemMonaziteSand(int par1) {
-        super(par1);
+    public ItemMonaziteSand(Block b) {
+        super(b);
         setHasSubtypes(true);
     }
 

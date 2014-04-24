@@ -11,16 +11,16 @@ public class ModCobbleBlock extends Block {
     MaterialTypes type;
 
     public ModCobbleBlock(MaterialTypes type) {
-        super(DeusXMachina.instance.config.getBlock(type.toCobble(), ModBlocks.getID()).getInt(), Material.rock);
+        super(Material.rock);
         this.type = type;
         setupBlock();
-        setStepSound(Block.soundStoneFootstep);
+        setStepSound(Block.soundTypeStone);
     }
 
     private void setupBlock() {
-        setUnlocalizedName(type.toCobble());
+        setBlockName(type.toCobble());
         setCreativeTab(DeusXMachina.instance.tab);
-        setTextureName(Archive.MOD_ID + ":cobble/" + type.toCobble());
+        setBlockTextureName(Archive.MOD_ID + ":cobble/" + type.toCobble());
         GameRegistry.registerBlock(this, Archive.MOD_ID + "." + type.toCobble());
     }
 

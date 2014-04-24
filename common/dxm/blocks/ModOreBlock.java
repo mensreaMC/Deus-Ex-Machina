@@ -6,6 +6,9 @@ import dxm.DeusXMachina;
 import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 
 import java.util.Random;
 
@@ -14,21 +17,21 @@ public class ModOreBlock extends BlockOre {
     MaterialTypes type;
 
     public ModOreBlock(MaterialTypes type) {
-        super(DeusXMachina.instance.config.getBlock(type.toOre(), ModBlocks.getID()).getInt());
         this.type = type;
         setupBlock();
-        setStepSound(Block.soundStoneFootstep);
+        setStepSound(Block.soundTypeStone);
     }
 
     private void setupBlock() {
-        setUnlocalizedName(type.toOre());
+        setBlockName(type.toOre());
         setCreativeTab(DeusXMachina.instance.tab);
-        setTextureName(Archive.MOD_ID + ":ore/" + type.toOre());
+        setBlockTextureName(Archive.MOD_ID + ":ore/" + type.toOre());
         GameRegistry.registerBlock(this, Archive.MOD_ID + "." + type.toOre());
     }
 
     @Override
-    public int idDropped(int par1, Random par2Random, int par3) {
-        return type.getCobble().blockID;
+    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+    {
+        return Item.getItemFromBlock(type.getCobble());
     }
 }

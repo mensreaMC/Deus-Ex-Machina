@@ -17,11 +17,10 @@ import java.util.List;
 import java.util.Random;
 
 public class BlockFertilizedBlock extends BlockOre {
-    public BlockFertilizedBlock(int id, Material rock) {
-        super(id);
+    public BlockFertilizedBlock() {
         setHardness(4.0F);
-        setStepSound(Block.soundStoneFootstep);
-        setUnlocalizedName("fertilizedBlock");
+        setStepSound(Block.soundTypeStone);
+        setBlockName("fertilizedBlock");
         setCreativeTab(CreativeTabs.tabBlock);
         setCreativeTab(CreativeTabs.tabBlock);
         setRequiresSelfNotify();

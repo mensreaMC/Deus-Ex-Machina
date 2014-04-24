@@ -11,16 +11,16 @@ public class ModGravelBlock extends Block {
     MaterialTypes type;
 
     public ModGravelBlock(MaterialTypes type) {
-        super(DeusXMachina.instance.config.getBlock(type.toOre(), ModBlocks.getID()).getInt(), Material.sand);
+        super(Material.sand);
         this.type = type;
         setupBlock();
-        setStepSound(Block.soundGravelFootstep);
+        setStepSound(Block.soundTypeGravel);
     }
 
     private void setupBlock() {
-        setUnlocalizedName(type.toGravel());
+        setBlockName(type.toGravel());
         setCreativeTab(DeusXMachina.instance.tab);
-        setTextureName(Archive.MOD_ID + ":gravel/" + type.toGravel());
+        setBlockTextureName(Archive.MOD_ID + ":gravel/" + type.toGravel());
         GameRegistry.registerBlock(this, Archive.MOD_ID + "." + type.toGravel());
     }
 

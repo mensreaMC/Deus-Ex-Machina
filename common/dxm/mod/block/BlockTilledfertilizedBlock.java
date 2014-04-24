@@ -17,7 +17,7 @@ import java.util.Random;
 
 public class BlockTilledfertilizedBlock extends Block {
     public BlockTilledfertilizedBlock(int id, Material rock) {
-        super(id, rock);
+        super(rock);
         setHardness(4.0F);
         setStepSound(Block.soundStoneFootstep);
         setUnlocalizedName("tilledfertilizedBlock");
