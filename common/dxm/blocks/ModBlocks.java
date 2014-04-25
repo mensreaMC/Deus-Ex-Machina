@@ -1,8 +1,10 @@
 package dxm.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import dxm.DeusXMachina;
 import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFalling;
 
 public class ModBlocks {
 
@@ -12,7 +14,7 @@ public class ModBlocks {
 
     public static void setup() {
         MaterialTypes.setup();
-        monaziteSand = new MonaziteSand();
+        monaziteSand = new BlockFalling().setBlockName("monaziteSand").setBlockTextureName(Archive.MOD_ID + ":ore/monaziteSand").setHardness(4).setStepSound(Block.soundTypeSand).setCreativeTab(DeusXMachina.instance.tab);
         fertilizedBlock = new FertilizedBlock();
         tilledFertilizedBlock = new TilledFertilizedBlock();
 
