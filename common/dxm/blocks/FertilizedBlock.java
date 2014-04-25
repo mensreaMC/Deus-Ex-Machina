@@ -1,4 +1,4 @@
-package dxm.mod.block;
+package dxm.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -16,7 +16,7 @@ public class FertilizedBlock extends Block {
         setHardness(4.0F);
         setStepSound(Block.soundTypeStone);
         setBlockName("fertilizedBlock");
-        setBlockTextureName(Archive.MOD_ID + ":fertilizedBlock");
+        setBlockTextureName(Archive.MOD_ID + ":bio/fertilizedBlock");
         setCreativeTab(DeusXMachina.instance.tab);
     }
 

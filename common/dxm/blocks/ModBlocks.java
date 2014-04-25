@@ -1,8 +1,7 @@
 package dxm.blocks;
 
-import dxm.mod.block.FertilizedBlock;
-import dxm.mod.block.BlockMonaziteSand;
-import dxm.mod.block.TilledFertilizedBlock;
+import cpw.mods.fml.common.registry.GameRegistry;
+import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 
 public class ModBlocks {
@@ -17,8 +16,8 @@ public class ModBlocks {
         fertilizedBlock = new FertilizedBlock();
         tilledFertilizedBlock = new TilledFertilizedBlock();
 
-        //GameRegistry.registerBlock(fertilizedBlock, ItemFertilizedBlock.class, modid + (fertilizedBlock.getUnlocalizedName().substring(5)));
-        //GameRegistry.registerBlock(tilledFertilizedBlock, ItemTilledfertilizedBlock.class, modid + (tilledFertilizedBlock.getUnlocalizedName().substring(5)));
-        //GameRegistry.registerBlock(monaziteSand, ItemMonaziteSand.class, modid + (monaziteSand.getUnlocalizedName().substring(5)));
+        GameRegistry.registerBlock(fertilizedBlock, Archive.MOD_ID + (fertilizedBlock.getUnlocalizedName().replace("tile", "")));
+        GameRegistry.registerBlock(tilledFertilizedBlock, Archive.MOD_ID + (tilledFertilizedBlock.getUnlocalizedName().replace("tile","")));
+        GameRegistry.registerBlock(monaziteSand, Archive.MOD_ID + (monaziteSand.getUnlocalizedName().replace("tile", "")));
     }
 }

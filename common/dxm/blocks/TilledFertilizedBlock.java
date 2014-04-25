@@ -1,6 +1,6 @@
-package dxm.mod.block;
+package dxm.blocks;
 
-import dxm.blocks.ModBlocks;
+import dxm.utils.library.Archive;
 import net.minecraft.item.Item;
 
 import java.util.Random;
@@ -9,6 +9,7 @@ public class TilledFertilizedBlock extends FertilizedBlock {
     public TilledFertilizedBlock() {
         super();
         setBlockName("tilledFertilizedBlock");
+        setBlockTextureName(Archive.MOD_ID + ":bio/tilledFertilizedBlock");
     }
 
     @Override
