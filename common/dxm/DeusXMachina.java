@@ -8,6 +8,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import dxm.blocks.ModBlocks;
+import dxm.items.ModItems;
 import dxm.utils.library.Archive;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -31,6 +32,7 @@ public class DeusXMachina {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModBlocks.setup();
+        ModItems.setup();
     }
 
     @EventHandler
