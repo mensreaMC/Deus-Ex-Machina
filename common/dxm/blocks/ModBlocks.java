@@ -14,12 +14,12 @@ public class ModBlocks {
 
     public static void setup() {
         MaterialTypes.setup();
-        monaziteSand = new BlockFalling().setBlockName("monaziteSand").setBlockTextureName(Archive.MOD_ID + ":ore/monaziteSand").setHardness(4).setStepSound(Block.soundTypeSand).setCreativeTab(DeusXMachina.instance.tab);
         fertilizedBlock = new FertilizedBlock();
         tilledFertilizedBlock = new TilledFertilizedBlock();
+        monaziteSand = new BlockFalling().setBlockName("monaziteSand").setBlockTextureName(Archive.MOD_ID + ":ore/monaziteSand").setHardness(4).setStepSound(Block.soundTypeSand).setCreativeTab(DeusXMachina.instance.tab);
 
         GameRegistry.registerBlock(fertilizedBlock, Archive.MOD_ID + (fertilizedBlock.getUnlocalizedName().replace("tile", "")));
-        GameRegistry.registerBlock(tilledFertilizedBlock, Archive.MOD_ID + (tilledFertilizedBlock.getUnlocalizedName().replace("tile","")));
+        GameRegistry.registerBlock(tilledFertilizedBlock, Archive.MOD_ID + (tilledFertilizedBlock.getUnlocalizedName().replace("tile", "")));
         GameRegistry.registerBlock(monaziteSand, Archive.MOD_ID + (monaziteSand.getUnlocalizedName().replace("tile", "")));
     }
 }
