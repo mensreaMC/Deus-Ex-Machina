@@ -5,6 +5,7 @@ import dxm.DeusXMachina;
 import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
+import net.minecraft.block.material.Material;
 
 public class ModBlocks {
 
@@ -14,7 +15,7 @@ public class ModBlocks {
 
     public static void setup() {
         MaterialTypes.setup();
-        fertilizedBlock = new FertilizedBlock();
+        fertilizedBlock = new ModBlock(Material.ground).setBlockName("fertilizedBlock").setBlockTextureName(Archive.MOD_ID + ":bio/fertilizedBlock").setHardness(4).setStepSound(Block.soundTypeGrass).setCreativeTab(DeusXMachina.instance.tab);
         tilledFertilizedBlock = new TilledFertilizedBlock();
         monaziteSand = new BlockFalling().setBlockName("monaziteSand").setBlockTextureName(Archive.MOD_ID + ":ore/monaziteSand").setHardness(4).setStepSound(Block.soundTypeSand).setCreativeTab(DeusXMachina.instance.tab);
 

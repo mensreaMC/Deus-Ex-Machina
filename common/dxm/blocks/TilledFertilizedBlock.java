@@ -17,7 +17,7 @@ public class TilledFertilizedBlock extends Block {
     public TilledFertilizedBlock() {
         super(Material.ground);
         setHardness(4.0F);
-        setStepSound(Block.soundTypeStone);
+        setStepSound(Block.soundTypeGrass);
         setBlockName("tilledFertilizedBlock");
         setCreativeTab(DeusXMachina.instance.tab);
         setBlockTextureName(Archive.MOD_ID + ":bio/tilledFertilizedBlock");
