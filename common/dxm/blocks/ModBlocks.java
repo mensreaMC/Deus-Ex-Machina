@@ -12,7 +12,7 @@ public class ModBlocks {
 
     public static void setup() {
         MaterialTypes.setup();
-        monaziteSand = new BlockMonaziteSand();
+        monaziteSand = new MonaziteSand();
         fertilizedBlock = new FertilizedBlock();
         tilledFertilizedBlock = new TilledFertilizedBlock();
 
