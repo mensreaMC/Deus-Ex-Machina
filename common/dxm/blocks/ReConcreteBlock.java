@@ -3,6 +3,7 @@ package dxm.blocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import dxm.DeusXMachina;
+import dxm.items.ModItems;
 import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -13,20 +14,21 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import java.util.Random;
 
-public class TilledFertilizedBlock extends Block {
-    public TilledFertilizedBlock() {
+public class ReConcreteBlock extends Block {
+    public ReConcreteBlock() {
         super(Material.ground);
-        setHardness(4.0F);
-        setResistance(10);
-        setStepSound(Block.soundTypeGrass);
-        setBlockName("tilledFertilizedBlock");
+        setHardness(20.0F);
+        setResistance(80);
+        setStepSound(Block.soundTypeStone);
+        setBlockName("reConcreteBlock");
         setCreativeTab(DeusXMachina.instance.tab);
-        setBlockTextureName(Archive.MOD_ID + ":bio/tilledFertilizedBlock");
+        setBlockTextureName(Archive.MOD_ID + ":fab/concreteBlock");
     }
 
     @Override
     public Item getItemDropped(int p_149650_1_, Random random, int p_149650_3_) {
-        return Item.getItemFromBlock(ModBlocks.fertilizedBlock);
+        return Item.getItemFromBlock(ModBlocks.concreteCobble);
+               //Item.getItemFromBlock(ModItems.rebar);
     }
 
     @SideOnly(Side.CLIENT)
