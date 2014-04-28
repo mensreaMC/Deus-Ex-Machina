@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
 public class MinecraftHelper {
+
     public static void registerBlock(Block block) {
         GameRegistry.registerBlock(block, StringHelper.cleanUnlocalizedBlockName(block));
     }

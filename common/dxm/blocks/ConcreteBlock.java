@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import java.util.Random;
 
 public class ConcreteBlock extends Block {
+
     public ConcreteBlock() {
         super(Material.ground);
         setHardness(10.0F);

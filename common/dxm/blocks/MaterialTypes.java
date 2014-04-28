@@ -1,6 +1,10 @@
 package dxm.blocks;
 
+import dxm.DeusXMachina;
+import dxm.utils.MinecraftHelper;
+import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 
 public enum MaterialTypes {
 
@@ -25,10 +29,13 @@ public enum MaterialTypes {
     }
 
     public static void setup() {
-        for(MaterialTypes mat : MaterialTypes.values()) {
-            mat.ore = new ModOreBlock(mat).setHardness(mat.hardness);
-            mat.cobble = new ModCobbleBlock(mat).setHardness(mat.hardness / 2);
-            mat.gravel = new ModGravelBlock(mat).setHardness(mat.hardness / 3);
+        for(MaterialTypes type : MaterialTypes.values()) {
+            type.ore = new ModOreBlock(type).setHardness(type.hardness).setBlockName(type.toOre()).setBlockTextureName(Archive.MOD_ID + ":ore/" + type.toOre()).setCreativeTab(DeusXMachina.instance.tab).setStepSound(Block.soundTypeStone);
+            type.cobble = new ModBlock(Material.rock).setHardness(type.hardness / 2).setBlockName(type.toCobble()).setBlockTextureName(Archive.MOD_ID + ":cobble/" + type.toCobble()).setCreativeTab(DeusXMachina.instance.tab).setStepSound(Block.soundTypeStone);
+            type.gravel = new ModBlock(Material.sand).setHardness(type.hardness / 3).setBlockName(type.toGravel()).setBlockTextureName(Archive.MOD_ID + ":gravel/" + type.toGravel()).setCreativeTab(DeusXMachina.instance.tab).setStepSound(Block.soundTypeGravel);
+            MinecraftHelper.registerBlock(type.ore);
+            MinecraftHelper.registerBlock(type.cobble);
+            MinecraftHelper.registerBlock(type.gravel);
         }
     }
 

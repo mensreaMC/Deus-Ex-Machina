@@ -2,23 +2,15 @@ package dxm.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import dxm.DeusXMachina;
-import dxm.utils.library.Archive;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class GeoActive extends Block {
-    public GeoActive() {
-        super(Material.ground);
-        setHardness(999);
-        setResistance(999);
-        setStepSound(Block.soundTypeStone);
-        setBlockName("geoActive");
-        setCreativeTab(DeusXMachina.instance.tab);
-        setBlockTextureName(Archive.MOD_ID + ":geo/geoActive");
+public class ModBlockTopTexture extends ModBlock {
+
+    public ModBlockTopTexture(Material mat) {
+        super(mat);
     }
 
     @SideOnly(Side.CLIENT)
