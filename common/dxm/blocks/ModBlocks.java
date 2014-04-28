@@ -14,10 +14,10 @@ public class ModBlocks {
     public static Block aestivumTwo;
     public static Block aestivumThree;
     public static Block asphaltBlock;
-    public static Block concreteCobble;
     public static Block adminConcreteBlock;
     public static Block adminAsphaltBlock;
     public static Block concreteBlock;
+    public static Block concreteCobble;
     public static Block cottonZero;
     public static Block cottonOne;
     public static Block cottonTwo;
@@ -63,17 +63,13 @@ public class ModBlocks {
         fertilizedBlock = new ModBlock(Material.ground).setBlockName("fertilizedBlock").setBlockTextureName(Archive.MOD_ID + ":bio/fertilizedBlock").setHardness(4).setResistance(10).setStepSound(Block.soundTypeGrass).setCreativeTab(DeusXMachina.instance.tab);
         geoActive = new ModBlockTopTexture(Material.ground).setBlockName("geoActive").setBlockTextureName(Archive.MOD_ID + ":geo/geoActive").setHardness(999).setResistance(999).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
         geoGas = new ModBlockTopTexture(Material.ground).setBlockName("geoGas").setBlockTextureName(Archive.MOD_ID + ":geo/geoGas").setHardness(999).setResistance(999).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
-        ;
         geoHeavy = new ModBlockTopTexture(Material.ground).setBlockName("geoHeavy").setBlockTextureName(Archive.MOD_ID + ":geo/geoHeavy").setHardness(999).setResistance(999).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
-        ;
         geoLight = new ModBlockTopTexture(Material.ground).setBlockName("geoLight").setBlockTextureName(Archive.MOD_ID + ":geo/geoLight").setHardness(999).setResistance(999).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
-        ;
         geoShale = new ModBlock(Material.ground).setBlockName("geoShale").setBlockTextureName(Archive.MOD_ID + ":geo/geoShale").setHardness(999).setResistance(999).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
         monaziteSand = new BlockFalling().setBlockName("monaziteSand").setBlockTextureName(Archive.MOD_ID + ":ore/monaziteSand").setHardness(4).setStepSound(Block.soundTypeSand).setCreativeTab(DeusXMachina.instance.tab);
         mudBrick = new ModBlock(Material.ground).setBlockName("mudBrick").setBlockTextureName(Archive.MOD_ID + ":fab/mudBrick").setHardness(1).setResistance(2).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
         reConcreteBlock = new ReConcreteBlock();
         rubberLeaf = new ModBlock(Material.ground).setBlockName("rubberLeaf").setBlockTextureName(Archive.MOD_ID + ":bio/rubberLeaf").setHardness(1).setResistance(1).setStepSound(Block.soundTypeGrass).setCreativeTab(DeusXMachina.instance.tab);
-        ;
         rubberLog = new RubberLog();
         tilledFertilizedBlock = new TilledFertilizedBlock();
     }
