@@ -9,21 +9,14 @@ import net.minecraft.block.material.Material;
 
 public class ModBlocks {
 
-<<<<<<< HEAD
-	public static Block adminConcreteBlock;
-	public static Block adminAsphaltBlock;
-	public static Block aestivumZero;
-	public static Block aestivumOne;
-	public static Block aestivumTwo;
-	public static Block aestivumThree;
-	public static Block asphaltBlock;
-	public static Block concreteCobble;
-=======
-    public static Block adminConcreteBlock;
-    public static Block adminAsphaltBlock;
+    public static Block aestivumZero;
+    public static Block aestivumOne;
+    public static Block aestivumTwo;
+    public static Block aestivumThree;
     public static Block asphaltBlock;
     public static Block concreteCobble;
->>>>>>> 50724368e9f051197936fde189a9128e377093a4
+    public static Block adminConcreteBlock;
+    public static Block adminAsphaltBlock;
     public static Block concreteBlock;
     public static Block cottonZero;
     public static Block cottonOne;
