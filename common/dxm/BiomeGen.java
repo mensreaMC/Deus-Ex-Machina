@@ -17,8 +17,8 @@ public class BiomeGen implements IWorldGenerator {
         }
     }
 
-    public void generateSurface(World par1World, Random par2Random, int chunkX, int chunkZ) {
-        String s = par1World.getBiomeGenForCoords(chunkX + 8, chunkZ + 8).biomeName;
+    public void generateSurface(World world, Random random, int chunkX, int chunkZ) {
+        String s = world.getBiomeGenForCoords(chunkX + 8, chunkZ + 8).biomeName;
         if(s.startsWith("Forest"))
             if(s.startsWith("Jungle"))
                 if(s.startsWith("Mesa"))
@@ -28,10 +28,10 @@ public class BiomeGen implements IWorldGenerator {
                             int veinSize = 100;
                             int height = 64;
                             for(int i = 0; i < rarity; ++i) {
-                                int randomPosX = chunkX + par2Random.nextInt(16);
-                                int randomPosY = par2Random.nextInt(height);
-                                int randomPosZ = chunkZ + par2Random.nextInt(16);
-                                (new WorldGenMinable(MaterialTypes.BAUXITE.getOre(), veinSize)).generate(par1World, par2Random, randomPosX, randomPosY, randomPosZ);
+                                int randomPosX = chunkX + random.nextInt(16);
+                                int randomPosY = random.nextInt(height);
+                                int randomPosZ = chunkZ + random.nextInt(16);
+                                (new WorldGenMinable(MaterialTypes.BAUXITE.getOre(), veinSize)).generate(world, random, randomPosX, randomPosY, randomPosZ);
                             }
                         }
     }
