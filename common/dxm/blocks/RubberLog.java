@@ -7,13 +7,11 @@ import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import java.util.Random;
-
 public class RubberLog extends Block {
+
     public RubberLog() {
         super(Material.ground);
         setHardness(2.0F);
@@ -25,18 +23,21 @@ public class RubberLog extends Block {
     }
 
     @SideOnly(Side.CLIENT)
-    private IIcon top;
+    private IIcon centerIcon;
 
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister register) {
         blockIcon = register.registerIcon(getTextureName());
-        top = register.registerIcon(getTextureName() + "Top");
+        centerIcon = register.registerIcon(getTextureName() + "Center");
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int meta) {
-        return side == ForgeDirection.UP.ordinal() ? top : blockIcon;
+        if(side == ForgeDirection.UP.ordinal() || side == ForgeDirection.DOWN.ordinal()) {
+            return centerIcon;
+        }
+        return blockIcon;
     }
 }

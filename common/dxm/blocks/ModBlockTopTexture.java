@@ -2,27 +2,15 @@ package dxm.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import dxm.DeusXMachina;
-import dxm.items.ModItems;
-import dxm.utils.library.Archive;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import java.util.Random;
+public class ModBlockTopTexture extends ModBlock {
 
-public class GeoLight extends Block {
-    public GeoLight() {
-        super(Material.ground);
-        setHardness(999);
-        setResistance(999);
-        setStepSound(Block.soundTypeStone);
-        setBlockName("geoLight");
-        setCreativeTab(DeusXMachina.instance.tab);
-        setBlockTextureName(Archive.MOD_ID + ":geo/geoLight");
+    public ModBlockTopTexture(Material mat) {
+        super(mat);
     }
 
     @SideOnly(Side.CLIENT)

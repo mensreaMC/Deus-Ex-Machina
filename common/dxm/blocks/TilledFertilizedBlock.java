@@ -14,6 +14,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import java.util.Random;
 
 public class TilledFertilizedBlock extends Block {
+
     public TilledFertilizedBlock() {
         super(Material.ground);
         setHardness(4.0F);
