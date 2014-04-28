@@ -4,6 +4,7 @@ import cpw.mods.fml.common.IWorldGenerator;
 import dxm.blocks.MaterialTypes;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
@@ -32,6 +33,35 @@ public class EventManager implements IWorldGenerator {
         addOreSpawn(MaterialTypes.NATIVEGOLD.getOre(), world, random, x, z, 16, 16, 15, random.nextInt(3), 1, 64);
         addOreSpawn(MaterialTypes.SULFUR.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 1, 32);
         addOreSpawn(MaterialTypes.URANINITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(2), 1, 64);
+        addSpecialOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100);
+    }
+
+    public void addSpecialOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY) {
+        if(canSpawn(maxY, minY, maxX, maxZ) && hasRightBiome(world.getBiomeGenForCoords(blockXPos, blockZPos))) {
+            int deltaY = maxY - minY;
+            for(int x = 0; x < chancesToSpawn; x++) {
+                int posX = blockXPos + random.nextInt(maxX);
+                int posY = minY + random.nextInt(deltaY);
+                int posZ = blockZPos + random.nextInt(maxZ);
+                new WorldGenMinable(block, maxVeinSize).generate(world, random, posX, posY, posZ);
+            }
+        }
+    }
+
+    private boolean hasRightBiome(BiomeGenBase biome) {
+        String name = biome.biomeName;
+        if(name.contains("Forest")) {
+            if(name.contains("Jungle")) {
+                if(name.contains("Mesa")) {
+                    if(name.contains("Plains")) {
+                        if(name.contains("Savanna")) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     /**
