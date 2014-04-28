@@ -15,7 +15,7 @@ public class ModOreBlock extends BlockOre {
     }
 
     @Override
-    public Item getItemDropped(int p_149650_1_, Random random, int p_149650_3_) {
+    public Item getItemDropped(int metadata, Random random, int fortue) {
         return Item.getItemFromBlock(type.getCobble());
     }
 }
