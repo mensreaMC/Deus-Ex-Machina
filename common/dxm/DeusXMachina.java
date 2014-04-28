@@ -39,6 +39,6 @@ public class DeusXMachina {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         GameRegistry.registerWorldGenerator(eventmanager, 1);
-        GameRegistry.registerWorldGenerator(biomegen, 1);
+        GameRegistry.registerWorldGenerator(biomegen, 2);
     }
 }
