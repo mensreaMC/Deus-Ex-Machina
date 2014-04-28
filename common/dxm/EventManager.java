@@ -2,6 +2,7 @@ package dxm;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import dxm.blocks.MaterialTypes;
+import dxm.blocks.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -21,16 +22,16 @@ public class EventManager implements IWorldGenerator {
     }
 
     private void generateSurface(World world, Random random, int x, int z) {
-        addOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(1), 54, 100);
+        //addOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100);
         addOreSpawn(MaterialTypes.CASSITITERITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        addOreSpawn(MaterialTypes.COAL.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(3), 1, 80);
+        addOreSpawn(MaterialTypes.COAL.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 1, 80);
         addOreSpawn(MaterialTypes.GALENA.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
         addOreSpawn(MaterialTypes.HEMATITE.getOre(), world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 80);
-        addOreSpawn(MaterialTypes.LIMESTONE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(1), 1, 80);
+        //addOreSpawn(MaterialTypes.LIMESTONE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 1, 80);
         addOreSpawn(MaterialTypes.MALACHITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        //addOreSpawn(MaterialTypes.MONAZITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(1), 54, 74);
+        //addOreSpawn(ModBlocks.monaziteSand, world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 74);
         addOreSpawn(MaterialTypes.NATIVEGOLD.getOre(), world, random, x, z, 16, 16, 15, random.nextInt(3), 1, 64);
-        addOreSpawn(MaterialTypes.SULFUR.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(1), 1, 32);
+        addOreSpawn(MaterialTypes.SULFUR.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 1, 32);
         addOreSpawn(MaterialTypes.URANINITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(2), 1, 64);
     }
 
