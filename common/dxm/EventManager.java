@@ -2,7 +2,6 @@ package dxm;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import dxm.blocks.MaterialTypes;
-import dxm.blocks.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;

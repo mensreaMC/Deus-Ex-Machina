@@ -1,7 +1,7 @@
 package dxm.blocks;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import dxm.DeusXMachina;
+import dxm.utils.MinecraftHelper;
 import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
@@ -9,10 +9,10 @@ import net.minecraft.block.material.Material;
 
 public class ModBlocks {
 
-	public static Block adminConcreteBlock;
-	public static Block adminAsphaltBlock;
-	public static Block asphaltBlock;
-	public static Block concreteCobble;
+    public static Block adminConcreteBlock;
+    public static Block adminAsphaltBlock;
+    public static Block asphaltBlock;
+    public static Block concreteCobble;
     public static Block concreteBlock;
     public static Block fertilizedBlock;
     public static Block geoActive;
@@ -29,12 +29,18 @@ public class ModBlocks {
 
     public static void setup() {
         MaterialTypes.setup();
-        
+
+        createBlocks();
+
+        registerBlocks();
+    }
+
+    private static void createBlocks() {
         adminAsphaltBlock = new ModBlock(Material.ground).setBlockName("adminAsphaltBlock").setBlockTextureName(Archive.MOD_ID + ":fab/asphaltBlock").setHardness(999).setResistance(999).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
         asphaltBlock = new ModBlock(Material.ground).setBlockName("asphaltBlock").setBlockTextureName(Archive.MOD_ID + ":fab/asphaltBlock").setHardness(1).setResistance(10).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
         adminConcreteBlock = new ModBlock(Material.ground).setBlockName("adminConcreteBlock").setBlockTextureName(Archive.MOD_ID + ":fab/concreteBlock").setHardness(999).setResistance(999).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
         concreteBlock = new ConcreteBlock();
-        concreteCobble = new ModBlock(Material.ground).setBlockName("concreteCobble").setBlockTextureName(Archive.MOD_ID + ":fab/concreteCobble").setHardness(4).setResistance(10).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab); 
+        concreteCobble = new ModBlock(Material.ground).setBlockName("concreteCobble").setBlockTextureName(Archive.MOD_ID + ":fab/concreteCobble").setHardness(4).setResistance(10).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
         fertilizedBlock = new ModBlock(Material.ground).setBlockName("fertilizedBlock").setBlockTextureName(Archive.MOD_ID + ":bio/fertilizedBlock").setHardness(4).setResistance(10).setStepSound(Block.soundTypeGrass).setCreativeTab(DeusXMachina.instance.tab);
         geoActive = new GeoActive();
         geoGas = new GeoGas();
@@ -47,23 +53,25 @@ public class ModBlocks {
         rubberLeaf = new RubberLeaf();
         rubberLog = new RubberLog();
         tilledFertilizedBlock = new TilledFertilizedBlock();
-        
-        GameRegistry.registerBlock(adminAsphaltBlock, adminAsphaltBlock.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(asphaltBlock, asphaltBlock.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(adminConcreteBlock, adminConcreteBlock.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(concreteCobble, concreteCobble.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(concreteBlock, concreteBlock.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(fertilizedBlock, fertilizedBlock.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(monaziteSand, monaziteSand.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(geoActive, geoActive.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(geoGas, geoGas.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(geoHeavy, geoHeavy.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(geoLight, geoLight.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(geoShale, geoShale.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(mudBrick, mudBrick.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(reConcreteBlock, reConcreteBlock.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(rubberLeaf, rubberLeaf.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(rubberLog, rubberLog.getUnlocalizedName().replace("tile", Archive.MOD_ID));
-        GameRegistry.registerBlock(tilledFertilizedBlock, tilledFertilizedBlock.getUnlocalizedName().replace("tile", Archive.MOD_ID));
+    }
+
+    private static void registerBlocks() {
+        MinecraftHelper.registerBlock(adminAsphaltBlock);
+        MinecraftHelper.registerBlock(asphaltBlock);
+        MinecraftHelper.registerBlock(adminConcreteBlock);
+        MinecraftHelper.registerBlock(concreteCobble);
+        MinecraftHelper.registerBlock(concreteBlock);
+        MinecraftHelper.registerBlock(fertilizedBlock);
+        MinecraftHelper.registerBlock(monaziteSand);
+        MinecraftHelper.registerBlock(geoActive);
+        MinecraftHelper.registerBlock(geoGas);
+        MinecraftHelper.registerBlock(geoHeavy);
+        MinecraftHelper.registerBlock(geoLight);
+        MinecraftHelper.registerBlock(geoShale);
+        MinecraftHelper.registerBlock(mudBrick);
+        MinecraftHelper.registerBlock(reConcreteBlock);
+        MinecraftHelper.registerBlock(rubberLeaf);
+        MinecraftHelper.registerBlock(rubberLog);
+        MinecraftHelper.registerBlock(tilledFertilizedBlock);
     }
 }
