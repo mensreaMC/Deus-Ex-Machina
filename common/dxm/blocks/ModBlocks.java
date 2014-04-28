@@ -11,20 +11,39 @@ public class ModBlocks {
 
 	public static Block adminConcreteBlock;
 	public static Block adminAsphaltBlock;
+	public static Block aestivumZero;
+	public static Block aestivumOne;
+	public static Block aestivumTwo;
+	public static Block aestivumThree;
 	public static Block asphaltBlock;
 	public static Block concreteCobble;
     public static Block concreteBlock;
+    public static Block cottonZero;
+    public static Block cottonOne;
+    public static Block cottonTwo;
+    public static Block cottonThree;
     public static Block fertilizedBlock;
+    public static Block flaxZero;
+    public static Block flaxOne;
+    public static Block flaxTwo;
+    public static Block flaxThree;
     public static Block geoActive;
     public static Block geoGas;
     public static Block geoHeavy;
     public static Block geoLight;
     public static Block geoShale;
+    public static Block hempZero;
+    public static Block hempOne;
+    public static Block hempTwo;
+    public static Block hempThree;
     public static Block monaziteSand;
     public static Block mudBrick;
     public static Block reConcreteBlock;
     public static Block rubberLeaf;
     public static Block rubberLog;
+    public static Block sugarCane;
+    public static Block switchgrassZero;
+    public static Block switchgrassOne;
     public static Block tilledFertilizedBlock;
 
     public static void setup() {
