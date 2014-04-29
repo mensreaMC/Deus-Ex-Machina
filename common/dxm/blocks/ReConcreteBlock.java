@@ -5,12 +5,10 @@ import dxm.items.ModItems;
 import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class ReConcreteBlock extends ModBlockTopTexture {
 

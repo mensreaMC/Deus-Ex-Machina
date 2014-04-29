@@ -20,8 +20,7 @@ public class DeusXMachina {
     @Mod.Instance(Archive.MOD_ID)
     public static DeusXMachina instance;
 
-    public final EventManager eventmanager = new EventManager();
-    public final BiomeGen biomegen = new BiomeGen();
+    public final WorldGen worldGen = new WorldGen();
 
     public final CreativeTabs tab = (new CreativeTabs(Archive.MOD_ID) {
         @SideOnly(Side.CLIENT)
@@ -38,7 +37,6 @@ public class DeusXMachina {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        GameRegistry.registerWorldGenerator(eventmanager, 1);
-        GameRegistry.registerWorldGenerator(biomegen, 2);
+        GameRegistry.registerWorldGenerator(worldGen, 1);
     }
 }

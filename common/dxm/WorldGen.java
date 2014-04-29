@@ -8,6 +8,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class WorldGen implements IWorldGenerator {
@@ -33,11 +36,11 @@ public class WorldGen implements IWorldGenerator {
         addOreSpawn(MaterialTypes.NATIVEGOLD.getOre(), world, random, x, z, 16, 16, 15, random.nextInt(3), 1, 64);
         addOreSpawn(MaterialTypes.SULFUR.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 1, 32);
         addOreSpawn(MaterialTypes.URANINITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(2), 1, 64);
-        addSpecialOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100);
+        addSpecialOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100, new ArrayList<String>(Arrays.asList("Forest", "Jungle", "Mesa", "Plains", "Savanna")));
     }
 
-    public void addSpecialOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY) {
-        if(canSpawn(maxY, minY, maxX, maxZ) && hasRightBiome(world.getBiomeGenForCoords(blockXPos, blockZPos))) {
+    public void addSpecialOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY, List<String> biomes) {
+        if(canSpawn(maxY, minY, maxX, maxZ) && hasRightBiome(world.getBiomeGenForCoords(blockXPos, blockZPos), biomes)) {
             int deltaY = maxY - minY;
             for(int x = 0; x < chancesToSpawn; x++) {
                 int posX = blockXPos + random.nextInt(maxX);
@@ -48,18 +51,9 @@ public class WorldGen implements IWorldGenerator {
         }
     }
 
-    private boolean hasRightBiome(BiomeGenBase biome) {
-        String name = biome.biomeName;
-        if(name.contains("Forest")) {
-            if(name.contains("Jungle")) {
-                if(name.contains("Mesa")) {
-                    if(name.contains("Plains")) {
-                        if(name.contains("Savanna")) {
-                            return true;
-                        }
-                    }
-                }
-            }
+    private boolean hasRightBiome(BiomeGenBase biome, List<String> biomes) {
+        if(biomes.contains(biome.biomeName)) {
+            return true;
         }
         return false;
     }
