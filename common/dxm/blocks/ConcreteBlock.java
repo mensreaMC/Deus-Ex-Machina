@@ -12,6 +12,7 @@ public class ConcreteBlock extends Block {
 
     public ConcreteBlock() {
         super(Material.ground);
+        this.slipperiness = 0.98F;
         setHardness(10.0F);
         setResistance(40);
         setStepSound(Block.soundTypeStone);

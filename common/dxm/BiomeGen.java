@@ -19,12 +19,9 @@ public class BiomeGen implements IWorldGenerator {
 
     public void generateSurface(World world, Random random, int chunkX, int chunkZ) {
         String s = world.getBiomeGenForCoords(chunkX + 8, chunkZ + 8).biomeName;
-        if(s.startsWith("Forest"))
-            if(s.startsWith("Jungle"))
-                if(s.startsWith("Mesa"))
-                    if(s.startsWith("Plains"))
-                        if(s.startsWith("Savanna")) {
-                            int rarity = 1;
+        if(s.startsWith("Forest") || s.startsWith("Jungle") || s.startsWith("Mesa") || s.startsWith("Plains") || s.startsWith("Savanna"))
+ {
+                            int rarity = 100;
                             int veinSize = 100;
                             int height = 64;
                             for(int i = 0; i < rarity; ++i) {
