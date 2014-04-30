@@ -24,23 +24,30 @@ public class ModItems {
 	public static Item sugarcaneBundle;
     
     public static void setup() {
-   
-    	rebar = new Item().setUnlocalizedName("rebar").setTextureName(Archive.MOD_ID + ":rebar").setCreativeTab(DeusXMachina.instance.tab);
-    	cottonSeed = new Item().setUnlocalizedName("cottonSeeds").setTextureName(Archive.MOD_ID + ":cottonSeeds").setCreativeTab(DeusXMachina.instance.tab);
-    	cottonBole = new Item().setUnlocalizedName("cottonBole").setTextureName(Archive.MOD_ID + ":cottonBole").setCreativeTab(DeusXMachina.instance.tab);
-    	cottonBundle = new Item().setUnlocalizedName("cottonBole").setTextureName(Archive.MOD_ID + ":cottonBundle").setCreativeTab(DeusXMachina.instance.tab);
-    	hempSeed = new Item().setUnlocalizedName("hempSeeds").setTextureName(Archive.MOD_ID + ":hempSeeds").setCreativeTab(DeusXMachina.instance.tab);
-    	hempBundle = new Item().setUnlocalizedName("hemp").setTextureName(Archive.MOD_ID + ":hempBundle").setCreativeTab(DeusXMachina.instance.tab);
-    	sugarcaneBundle = new Item().setUnlocalizedName("sugarcaneBundle").setTextureName(Archive.MOD_ID + ":sugarcaneBundle").setCreativeTab(DeusXMachina.instance.tab);
-    	switchgrassSeed = new Item().setUnlocalizedName("switchgrassSeeds").setTextureName(Archive.MOD_ID + ":switchgrassSeeds").setCreativeTab(DeusXMachina.instance.tab);
-    	switchgrassBundle = new Item().setUnlocalizedName("switchgrass").setTextureName(Archive.MOD_ID + ":switchgrassBundle").setCreativeTab(DeusXMachina.instance.tab);
-    	einkornSeed = new Item().setUnlocalizedName("aestivumSeeds").setTextureName(Archive.MOD_ID + ":einkornSeeds").setCreativeTab(DeusXMachina.instance.tab);
-    	einkornBundle = new Item().setUnlocalizedName("aestivum").setTextureName(Archive.MOD_ID + ":einkornBundle").setCreativeTab(DeusXMachina.instance.tab);
-    	rubberSapling = new Item().setUnlocalizedName("rubberSapling").setTextureName(Archive.MOD_ID + ":rubberSapling").setCreativeTab(DeusXMachina.instance.tab);
-    	flaxSeeds = new Item().setUnlocalizedName("flaxSeeds").setTextureName(Archive.MOD_ID + ":flaxSeeds").setCreativeTab(DeusXMachina.instance.tab);
-    	flaxBundle = new Item().setUnlocalizedName("flax").setTextureName(Archive.MOD_ID + ":flaxBundle").setCreativeTab(DeusXMachina.instance.tab);
-    	
-    	MinecraftHelper.registerItem(rebar);
+       	createItems();
+
+        registerItems();
+    }
+
+    public static void createItems() {
+        rebar = new Item().setUnlocalizedName("rebar").setTextureName(Archive.MOD_ID + ":rebar").setCreativeTab(DeusXMachina.instance.tab);
+        cottonSeed = new Item().setUnlocalizedName("cottonSeeds").setTextureName(Archive.MOD_ID + ":cottonSeeds").setCreativeTab(DeusXMachina.instance.tab);
+        cottonBole = new Item().setUnlocalizedName("cottonBole").setTextureName(Archive.MOD_ID + ":cottonBole").setCreativeTab(DeusXMachina.instance.tab);
+        cottonBundle = new Item().setUnlocalizedName("cottonBole").setTextureName(Archive.MOD_ID + ":cottonBundle").setCreativeTab(DeusXMachina.instance.tab);
+        hempSeed = new Item().setUnlocalizedName("hempSeeds").setTextureName(Archive.MOD_ID + ":hempSeeds").setCreativeTab(DeusXMachina.instance.tab);
+        hempBundle = new Item().setUnlocalizedName("hemp").setTextureName(Archive.MOD_ID + ":hempBundle").setCreativeTab(DeusXMachina.instance.tab);
+        sugarcaneBundle = new Item().setUnlocalizedName("sugarcaneBundle").setTextureName(Archive.MOD_ID + ":sugarcaneBundle").setCreativeTab(DeusXMachina.instance.tab);
+        switchgrassSeed = new Item().setUnlocalizedName("switchgrassSeeds").setTextureName(Archive.MOD_ID + ":switchgrassSeeds").setCreativeTab(DeusXMachina.instance.tab);
+        switchgrassBundle = new Item().setUnlocalizedName("switchgrass").setTextureName(Archive.MOD_ID + ":switchgrassBundle").setCreativeTab(DeusXMachina.instance.tab);
+        einkornSeed = new Item().setUnlocalizedName("aestivumSeeds").setTextureName(Archive.MOD_ID + ":einkornSeeds").setCreativeTab(DeusXMachina.instance.tab);
+        einkornBundle = new Item().setUnlocalizedName("aestivum").setTextureName(Archive.MOD_ID + ":einkornBundle").setCreativeTab(DeusXMachina.instance.tab);
+        rubberSapling = new Item().setUnlocalizedName("rubberSapling").setTextureName(Archive.MOD_ID + ":rubberSapling").setCreativeTab(DeusXMachina.instance.tab);
+        flaxSeeds = new Item().setUnlocalizedName("flaxSeeds").setTextureName(Archive.MOD_ID + ":flaxSeeds").setCreativeTab(DeusXMachina.instance.tab);
+        flaxBundle = new Item().setUnlocalizedName("flax").setTextureName(Archive.MOD_ID + ":flaxBundle").setCreativeTab(DeusXMachina.instance.tab);
+    }
+
+    public static void registerItems(){
+        MinecraftHelper.registerItem(rebar);
         MinecraftHelper.registerItem(cottonSeed);
         MinecraftHelper.registerItem(cottonBole);
         MinecraftHelper.registerItem(cottonBundle);
@@ -54,6 +61,5 @@ public class ModItems {
         MinecraftHelper.registerItem(rubberSapling);
         MinecraftHelper.registerItem(flaxSeeds);
         MinecraftHelper.registerItem(flaxBundle);
-
     }
 }
