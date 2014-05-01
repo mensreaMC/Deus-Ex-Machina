@@ -15,6 +15,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 
 @Mod(modid = Archive.MOD_ID)
+@SuppressWarnings({"UnusedParameters", "UnusedDeclaration"})
 public class DeusXMachina {
 
     @Mod.Instance(Archive.MOD_ID)
