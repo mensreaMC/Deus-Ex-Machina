@@ -99,9 +99,7 @@ public class HempCrop extends BlockCrops {
 
     public boolean canSeeSky(World world, int x, int y, int z) {
         for(int i = y + 1; i < 256; i++) {
-            if((!world.isAirBlock(x, i, z)) && (!(Block.blocksList[world.getBlockId(x, i, z)] instanceof BlockBreakable
-                    || world.getBlockId(x, i, z) == Block.waterMoving.blockID || world.getBlockId(x, i, z) ==
-                    Block.waterStill.blockID))) {
+            if((!world.isAirBlock(x, i, z))) {
                 return false;
             }
         }

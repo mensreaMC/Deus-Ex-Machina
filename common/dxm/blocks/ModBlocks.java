@@ -43,9 +43,12 @@ public class ModBlocks {
     public static Block reConcreteBlock;
     public static Block rubberLeaf;
     public static Block rubberLog;
-    public static Block sugarCane;
+    public static Block sugarcaneZero;
+    public static Block sugarcaneOne;
+    public static Block sugarcaneTwo;
     public static Block switchgrassZero;
     public static Block switchgrassOne;
+    public static Block switchgrassTwo;
     public static Block tilledFertilizedBlock;
 
     public static void setup() {
@@ -71,7 +74,7 @@ public class ModBlocks {
         einkornTwo = new EinkornTwo();
         einkornThree = new EinkornThree();
         enormousLeaf = new ModBlock(Material.ground).setBlockName("enormousLeaf").setBlockTextureName(Archive.MOD_ID + ":bio/enormousLeaf").setHardness(1).setResistance(1).setStepSound(Block.soundTypeGrass).setCreativeTab(DeusXMachina.instance.tab);
-        enormousLog = new ModBlock(Material.ground).setBlockName("enormousLog").setBlockTextureName(Archive.MOD_ID + ":bio/enormousLog").setHardness(1).setResistance(1).setStepSound(Block.soundTypeWood).setCreativeTab(DeusXMachina.instance.tab);
+        enormousLog = new ModBlockTopTexture(Material.ground).setBlockName("enormousLog").setBlockTextureName(Archive.MOD_ID + ":bio/enormousLog").setHardness(1).setResistance(1).setStepSound(Block.soundTypeWood).setCreativeTab(DeusXMachina.instance.tab);
         fertilizedBlock = new ModBlock(Material.ground).setBlockName("fertilizedBlock").setBlockTextureName(Archive.MOD_ID + ":bio/fertilizedBlock").setHardness(4).setResistance(10).setStepSound(Block.soundTypeGrass).setCreativeTab(DeusXMachina.instance.tab);
         flaxZero = new FlaxZero();
         flaxOne = new FlaxOne();
@@ -90,10 +93,13 @@ public class ModBlocks {
         mudBrick = new ModBlock(Material.ground).setBlockName("mudBrick").setBlockTextureName(Archive.MOD_ID + ":fab/mudBrick").setHardness(1).setResistance(2).setStepSound(Block.soundTypeStone).setCreativeTab(DeusXMachina.instance.tab);
         reConcreteBlock = new ReConcreteBlock();
         rubberLeaf = new ModBlock(Material.ground).setBlockName("rubberLeaf").setBlockTextureName(Archive.MOD_ID + ":bio/rubberLeaf").setHardness(1).setResistance(1).setStepSound(Block.soundTypeGrass).setCreativeTab(DeusXMachina.instance.tab);
-        rubberLog = new ModBlock(Material.ground).setBlockName("rubberLog").setBlockTextureName(Archive.MOD_ID + ":bio/rubberLog").setHardness(1).setResistance(1).setStepSound(Block.soundTypeWood).setCreativeTab(DeusXMachina.instance.tab);
-        sugarCane = new SugarCane();
+        rubberLog = new ModBlockTopTexture(Material.ground).setBlockName("rubberLog").setBlockTextureName(Archive.MOD_ID + ":bio/rubberLog").setHardness(1).setResistance(1).setStepSound(Block.soundTypeWood).setCreativeTab(DeusXMachina.instance.tab);
+        sugarcaneZero = new SugarcaneZero();
+        sugarcaneOne = new SugarcaneOne();
+        sugarcaneTwo = new SugarcaneTwo();
         switchgrassZero = new SwitchgrassZero();
         switchgrassOne = new SwitchgrassOne();
+        switchgrassTwo = new SwitchgrassTwo();
         tilledFertilizedBlock = new TilledFertilizedBlock();
     }
 
@@ -132,9 +138,12 @@ public class ModBlocks {
         MinecraftHelper.registerBlock(reConcreteBlock);
         MinecraftHelper.registerBlock(rubberLeaf);
         MinecraftHelper.registerBlock(rubberLog);
-        MinecraftHelper.registerBlock(sugarCane);
+        MinecraftHelper.registerBlock(sugarcaneZero);
+        MinecraftHelper.registerBlock(sugarcaneOne);
+        MinecraftHelper.registerBlock(sugarcaneTwo);
         MinecraftHelper.registerBlock(switchgrassZero);
         MinecraftHelper.registerBlock(switchgrassOne);
+        MinecraftHelper.registerBlock(switchgrassTwo);
         MinecraftHelper.registerBlock(tilledFertilizedBlock);
     }
 }
