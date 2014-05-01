@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class CottonOne extends Block{
 
     public CottonOne() {
-        super(Material.ground);
+        super(Material.plants);
         setHardness(1.0F);
         setResistance(1);
         setStepSound(Block.soundTypeStone);
