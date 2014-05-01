@@ -25,5 +25,4 @@ public class ConcreteBlock extends Block {
     public Item getItemDropped(int p_149650_1_, Random random, int p_149650_3_) {
         return Item.getItemFromBlock(ModBlocks.concreteCobble);
     }
-
 }

@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 
 import java.util.ArrayList;
 
-public class CottonOne extends Block{
+public class CottonOne extends Block {
 
     public CottonOne() {
         super(Material.plants);

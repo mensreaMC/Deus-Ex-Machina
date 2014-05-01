@@ -1,15 +1,8 @@
 package dxm.blocks;
 
-import java.util.ArrayList;
-import java.util.Random;
-
-import javax.swing.Icon;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import dxm.DeusXMachina;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -20,154 +13,133 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 
-public class CropBlocks extends BlockCrops
-{
-  protected ItemSeeds mySeed;
-  protected Item myProduct;
-  private int fertileGrowthRate;
-  private int nonFertileGrowthRate;
-  private int myTexIndex;
-  public static int blockID;
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Random;
 
-  public CropBlocks(int id, int texIndex, ItemSeeds seed, Item product, int fertGrowth, int nonFertGrowth, String name)
-  {
-   // super(id, texIndex);
-	super();
-    this.mySeed = seed;
-    this.myProduct = product;
-    this.fertileGrowthRate = fertGrowth;
-    this.nonFertileGrowthRate = nonFertGrowth;
-    this.myTexIndex = texIndex;
-    setTickRandomly(true);
-   // setRequiresSelfNotify(); XXX
-   // setTextureFile(DrugMain.tex);
-    setCreativeTab(CreativeTabs.tabMisc);
-    getUnlocalizedName();
-    setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.2F, 1.0F);
-  }
+public class CropBlocks extends BlockCrops {
+    protected ItemSeeds mySeed;
+    protected Item myProduct;
+    private int fertileGrowthRate;
+    private int nonFertileGrowthRate;
+    private int myTexIndex;
+    public static int blockID;
 
-  public void updateTick(World world, int x, int y, int z, Random random)
-  {
-    if (world.getBlockMetadata(x, y, z) < 3)
-    {
-      if ((random.nextInt(isFertile(world, x, y - 1, z) ? this.fertileGrowthRate : this.nonFertileGrowthRate) == 0) && (canSeeSky(world, x, y, z)))
-      {
-        world.setBlockMetadataWithNotify(x, y, z, 
-          world.getBlockMetadata(x, y, z) + 1, 3);
-        setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.2F + world.getBlockMetadata(x, y, z) * 0.2F, 1.0F);
-      }
-    }
-  }
-
-  public EnumPlantType getPlantType(World world, int x, int y, int z)
-  {
-    return EnumPlantType.Crop;
-  }
-
-  public boolean isOpaqueCube()
-  {
-    return false;
-  }
-
-  public int getBlockTextureFromSideAndMetadata(int side, int metadata)
-  {
-    return this.myTexIndex + metadata;
-  }
-
-  protected ItemSeeds getSeedItem()
-  {
-    return this.mySeed;
-  }
-
-  public int idDropped(int metadata, Random random, int par2)
-  {
-    return -1;
-  }
-
-  public ArrayList getBlockDropped(World world, int x, int y, int z, int metaData, int levelEnchant)
-  {
-    ArrayList itemList = new ArrayList();
-
-    if (metaData < 3)
-    {
-      itemList.add(new ItemStack(this.mySeed));
-      return itemList;
+    public CropBlocks(int id, int texIndex, ItemSeeds seed, Item product, int fertGrowth, int nonFertGrowth, String name) {
+        // super(id, texIndex);
+        super();
+        this.mySeed = seed;
+        this.myProduct = product;
+        this.fertileGrowthRate = fertGrowth;
+        this.nonFertileGrowthRate = nonFertGrowth;
+        this.myTexIndex = texIndex;
+        setTickRandomly(true);
+        // setRequiresSelfNotify(); XXX
+        // setTextureFile(DrugMain.tex);
+        setCreativeTab(CreativeTabs.tabMisc);
+        getUnlocalizedName();
+        setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.2F, 1.0F);
     }
 
-    if (metaData == 3)
-    {
-      itemList.add(new ItemStack(this.myProduct));
-
-      for (int i = 0; i < 3 + levelEnchant; i++)
-      {
-        if (world.rand.nextInt(3) != 2)
-          continue;
-        itemList.add(new ItemStack(this.mySeed));
-      }
+    public void updateTick(World world, int x, int y, int z, Random random) {
+        if(world.getBlockMetadata(x, y, z) < 3) {
+            if((random.nextInt(isFertile(world, x, y - 1, z) ? this.fertileGrowthRate : this.nonFertileGrowthRate) == 0) && (canSeeSky(world, x, y, z))) {
+                world.setBlockMetadataWithNotify(x, y, z,
+                        world.getBlockMetadata(x, y, z) + 1, 3);
+                setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.2F + world.getBlockMetadata(x, y, z) * 0.2F, 1.0F);
+            }
+        }
     }
 
-    return itemList;
-  }
-
-  protected Item getCropItem()
-  {
-    return this.myProduct;
-  }
-
-  //public boolean canBlockStay(World world, int x, int y, int z)
-  //{
-    //return world.getBlock(x, y - 1, z) == Block;
-  //}
-
-  public void fertilize(World world, int x, int y, int z)
-  {
-    if ((canSeeSky(world, x, y, z)))
-    {
-      world.setBlockMetadataWithNotify(x, y, z, 3, 3); //3?
-      setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.8F, 1.0F);
+    public EnumPlantType getPlantType(World world, int x, int y, int z) {
+        return EnumPlantType.Crop;
     }
-  }
 
-  public boolean canSeeSky(World world, int x, int y, int z)
-  {
-    for (int i = y + 1; i < 256; i++)
-    {
-      if (!world.isAirBlock(x, i, z))
-      {
+    public boolean isOpaqueCube() {
         return false;
-      }
     }
-    return true;
-  }
-  
-  @SideOnly(Side.CLIENT)
-  private Icon[] icons;
-        
-  @SideOnly(Side.CLIENT)
-  public void registerIcons(IIconRegister par1IconRegister)
-  {
-         icons = new Icon[4];
-              
-         for(int i = 0; i < this.icons.length; i++)
-         {
-          this.icons[i] = par1IconRegister.registerIcon(DeusXMachina.modID + ":" + (this.getUnlocalizedName().substring(5)) + "_" + i);
-         }
-  }
-  
-  
-  @SideOnly(Side.CLIENT)
 
-  /**
-   * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
-   */
-  public IIcon getIcon(int par1, int par2)
-  {
-      if (par2 < 0 || par2 > 3)
-      {
-          par2 = 3;
-      }
+    public int getBlockTextureFromSideAndMetadata(int side, int metadata) {
+        return this.myTexIndex + metadata;
+    }
 
-      return (IIcon) this.icons[par2];
-  }
+    protected ItemSeeds getSeedItem() {
+        return this.mySeed;
+    }
+
+    public int idDropped(int metadata, Random random, int par2) {
+        return -1;
+    }
+
+    public ArrayList getBlockDropped(World world, int x, int y, int z, int metaData, int levelEnchant) {
+        ArrayList itemList = new ArrayList();
+
+        if(metaData < 3) {
+            itemList.add(new ItemStack(this.mySeed));
+            return itemList;
+        }
+
+        if(metaData == 3) {
+            itemList.add(new ItemStack(this.myProduct));
+
+            for(int i = 0; i < 3 + levelEnchant; i++) {
+                if(world.rand.nextInt(3) != 2)
+                    continue;
+                itemList.add(new ItemStack(this.mySeed));
+            }
+        }
+
+        return itemList;
+    }
+
+    protected Item getCropItem() {
+        return this.myProduct;
+    }
+
+    //public boolean canBlockStay(World world, int x, int y, int z)
+    //{
+    //return world.getBlock(x, y - 1, z) == Block;
+    //}
+
+    public void fertilize(World world, int x, int y, int z) {
+        if((canSeeSky(world, x, y, z))) {
+            world.setBlockMetadataWithNotify(x, y, z, 3, 3); //3?
+            setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.8F, 1.0F);
+        }
+    }
+
+    public boolean canSeeSky(World world, int x, int y, int z) {
+        for(int i = y + 1; i < 256; i++) {
+            if(!world.isAirBlock(x, i, z)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @SideOnly(Side.CLIENT)
+    private Icon[] icons;
+
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IIconRegister par1IconRegister) {
+        icons = new Icon[4];
+
+        for(int i = 0; i < this.icons.length; i++) {
+            this.icons[i] = par1IconRegister.registerIcon(DeusXMachina.modID + ":" + (this.getUnlocalizedName().substring(5)) + "_" + i);
+        }
+    }
+
+
+    @SideOnly(Side.CLIENT)
+
+    /**
+     * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+     */
+    public IIcon getIcon(int par1, int par2) {
+        if(par2 < 0 || par2 > 3) {
+            par2 = 3;
+        }
+
+        return (IIcon) this.icons[par2];
+    }
 }
-

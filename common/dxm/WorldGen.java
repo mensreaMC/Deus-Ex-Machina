@@ -26,28 +26,19 @@ public class WorldGen implements IWorldGenerator {
     }
 
     private void generateSurface(World world, Random random, int x, int z) {
-       //possibly make a config to alter spawn chance and biome spawning
-    	//addOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100);
+        //possibly make a config to alter spawn chance and biome spawning
         addOreSpawn(MaterialTypes.CASSITITERITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        //addOreSpawn(MaterialTypes.COAL.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 1, 80);
         addOreSpawn(MaterialTypes.GALENA.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
         addOreSpawn(MaterialTypes.HEMATITE.getOre(), world, random, x, z, 16, 16, 50, random.nextInt(3), 1, 80);
-        //addOreSpawn(MaterialTypes.LIMESTONE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 40, 100);
         addOreSpawn(MaterialTypes.MALACHITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(3), 1, 64);
-        //addOreSpawn(ModBlocks.monaziteSand, world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 74);
         addOreSpawn(MaterialTypes.NATIVEGOLD.getOre(), world, random, x, z, 16, 16, 15, random.nextInt(3), 1, 64);
         addOreSpawn(MaterialTypes.SULFUR.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 1, 32);
         addOreSpawn(MaterialTypes.URANINITE.getOre(), world, random, x, z, 16, 16, 25, random.nextInt(2), 1, 64);
+
         addSpecialOreSpawn(MaterialTypes.BAUXITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 40, 100, new ArrayList<String>(Arrays.asList("Forest", "Jungle", "Savanna")));
         addSpecialOreSpawn(MaterialTypes.COAL.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 40, 100, new ArrayList<String>(Arrays.asList("Swamp", "Hills", "Taiga")));
-        //addSpecialOreSpawn(MaterialTypes.GALENA.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100, new ArrayList<String>(Arrays.asList("Forest", "Jungle", "Mesa", "Plains", "Savanna")));
-        //addSpecialOreSpawn(MaterialTypes.HEMATITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100, new ArrayList<String>(Arrays.asList("Forest", "Jungle", "Mesa", "Plains", "Savanna")));
         addSpecialOreSpawn(MaterialTypes.LIMESTONE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 40, 100, new ArrayList<String>(Arrays.asList("Plains")));
-        //addSpecialOreSpawn(MaterialTypes.MALACHITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100, new ArrayList<String>(Arrays.asList("Forest", "Jungle", "Mesa", "Plains", "Savanna")));
         addSpecialOreSpawn(ModBlocks.monaziteSand, world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100, new ArrayList<String>(Arrays.asList("Beach", "Ocean", "River")));
-        //addSpecialOreSpawn(MaterialTypes.NATIVEGOLD.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100, new ArrayList<String>(Arrays.asList("Forest", "Jungle", "Mesa", "Plains", "Savanna")))
-        //addSpecialOreSpawn(MaterialTypes.SULFUR.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100, new ArrayList<String>(Arrays.asList("Forest", "Jungle", "Mesa", "Plains", "Savanna")));
-        //addSpecialOreSpawn(MaterialTypes.URANINITE.getOre(), world, random, x, z, 16, 16, 100, random.nextInt(2), 54, 100, new ArrayList<String>(Arrays.asList("Mesa")));
     }
 
     public void addSpecialOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY, List<String> biomes) {
