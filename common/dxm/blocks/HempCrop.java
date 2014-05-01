@@ -8,16 +8,21 @@ package dxm.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import dxm.DeusXMachina;
+import dxm.utils.library.Archive;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.BlockCrops;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -113,14 +118,14 @@ public class HempCrop extends BlockCrops {
     }
 
     @SideOnly(Side.CLIENT)
-    private Icon[] icons;
+    private IIcon[] icons;
 
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister par1IconRegister) {
-        icons = new Icon[4];
+    public void registerIcons(IIconRegister par1IconRegister) {
+        icons = new IIcon[4];
 
         for(int i = 0; i < this.icons.length; i++) {
-            this.icons[i] = par1IconRegister.registerIcon(DrugMain.modID + ":" + (this.getUnlocalizedName().substring(5)) + "_" + i);
+            this.icons[i] = par1IconRegister.registerIcon(Archive.MOD_ID + ":" + (this.getUnlocalizedName().substring(5)) + "_" + i);
         }
     }
 
@@ -130,7 +135,7 @@ public class HempCrop extends BlockCrops {
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
      */
-    public Icon getIcon(int par1, int par2) {
+    public IIcon getIcon(int par1, int par2) {
         if(par2 < 0 || par2 > 3) {
             par2 = 3;
         }

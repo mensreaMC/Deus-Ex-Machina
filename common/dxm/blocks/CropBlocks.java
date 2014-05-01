@@ -3,6 +3,7 @@ package dxm.blocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import dxm.DeusXMachina;
+import dxm.utils.library.Archive;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -118,14 +119,14 @@ public class CropBlocks extends BlockCrops {
     }
 
     @SideOnly(Side.CLIENT)
-    private Icon[] icons;
+    private IIcon[] icons;
 
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister par1IconRegister) {
-        icons = new Icon[4];
+    public void registerIcons(IIconRegister register) {
+        icons = new IIcon[4];
 
         for(int i = 0; i < this.icons.length; i++) {
-            this.icons[i] = par1IconRegister.registerIcon(DeusXMachina.modID + ":" + (this.getUnlocalizedName().substring(5)) + "_" + i);
+            this.icons[i] = register.registerIcon(Archive.MOD_ID + ":" + (this.getUnlocalizedName().substring(5)) + "_" + i);
         }
     }
 
