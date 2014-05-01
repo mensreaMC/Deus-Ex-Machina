@@ -2,7 +2,6 @@ package dxm.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import dxm.DeusXMachina;
 import dxm.utils.library.Archive;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -14,7 +13,6 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Random;
 
