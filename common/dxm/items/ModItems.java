@@ -45,7 +45,7 @@ public class ModItems {
         switchgrassSeeds = new Item().setUnlocalizedName("switchgrassSeeds").setTextureName(Archive.MOD_ID + ":switchgrassSeeds").setCreativeTab(DeusXMachina.instance.tab);
         switchgrassBundle = new Item().setUnlocalizedName("switchgrassBundle").setTextureName(Archive.MOD_ID + ":switchgrassBundle").setCreativeTab(DeusXMachina.instance.tab);
         chaff = new Item().setUnlocalizedName("chaff").setTextureName(Archive.MOD_ID + ":chaff").setCreativeTab(DeusXMachina.instance.tab);
-        einkornGrain = new Item().setUnlocalizedName("einkornGrain").setTextureName(Archive.MOD_ID + ":einkornGrain").setCreativeTab(DeusXMachina.instance.tab);switchgrassBundle = new Item().setUnlocalizedName("switchgrass").setTextureName(Archive.MOD_ID + ":switchgrassBundle").setCreativeTab(DeusXMachina.instance.tab);
+        einkornGrain = new Item().setUnlocalizedName("einkornGrain").setTextureName(Archive.MOD_ID + ":einkornGrain").setCreativeTab(DeusXMachina.instance.tab);
         einkornSeeds = new Item().setUnlocalizedName("einkornSeeds").setTextureName(Archive.MOD_ID + ":einkornSeeds").setCreativeTab(DeusXMachina.instance.tab);
         einkornBundle = new Item().setUnlocalizedName("einkornBundle").setTextureName(Archive.MOD_ID + ":einkornBundle").setCreativeTab(DeusXMachina.instance.tab);
         rubberSapling = new Item().setUnlocalizedName("rubberSapling").setTextureName(Archive.MOD_ID + ":rubberSapling").setCreativeTab(DeusXMachina.instance.tab);
