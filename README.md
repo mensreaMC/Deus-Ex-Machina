@@ -6,7 +6,7 @@ Have you ever wanted a mod in minecraft where you can reproduce the greatest ach
 A mod that rewards you for building epic dams, windmills and coal plants?
 Rewards you for exploring and building houses, farms and castles?
 Gives you the option to solve your problems by a variety of means and liberates your creativity from
-the chore of monotonous crafting systems?
+the chore of monotonous crafting systems and does it all through the use of interactive NPC's who can work with, or against you?
 
 Deus Ex Machina (DXM), or god in the machine, is a mod that seeks to fulfill your ambitions.
 You will have the opportunity to build realistic machines to process your mineral wealth,
@@ -18,6 +18,9 @@ The opportunities are endless. DXM is more than just a tech mod: it's an experie
 
 Deus Ex Machina is firmly rooted in a realistic world of ores, plant life, electrical, 
 mechanical and chemical principles and the systems that grew from an understanding of these things.
+
+Aside from it's technical aspects, DXM also emphasizes a strong social aspect where players are encouraged to interact with NPC's. 
+Just as any given civilization was not the sole effort of one individual, players will need to harnass social and political forces to build their empires. From origins as humble as a camp in the wilderness, to villages, cities and nations, players will guide the development of their civilization from thatch huts to the stars.
 
 Hundreds of hours of research have gone into learning and reading about human history for this to have been 
 made possible.
@@ -86,24 +89,15 @@ A.supporters are people who can spread the word and be advocates for the project
 
 So far the project has accumulated a handful of personnel who have pledged to work on things to varying degrees. I will list what people have done as well as what they have pledged to do.
 
-I.Mensrea (designer, spriter)                                                                             
+I.Mensrea (designer, spriter, forum chimp)                                                                             
 A.design docs, sprites                                                                                    
 B.refining designs, making sprites                                                                        
 
-II.CrafterOfMines57 (programmer)                                                                          
-A.consultant, programmed windmills, tools, fuses                                                          
-B.working on UE implementation                                                                            
+II.Captain_Shadows (programmer)                                                                           
+A.original coder and always with us in spirit, as I would have nothing without him
 
-III.Laserbeam_nik (programmer)                                                                            
-A.basics, some worldgen, adding blocks, copy/pasta                                                        
-B.developing programming knowledge                                                                        
-
-IV.Captain_Shadows (programmer)                                                                           
-A.consultant, cleaned up lasers code and made it workable                                                 
-B.assisting laser via skype, cleaning up code                                                             
-
-V.Deantheftexpress (programmer)                                                                           
-A.a dancing queen, only 17                                                                                
+III.Shadowcode13 (programmer, mastermind)
+A.an ambitious young coder with everything going for him who reinvigorated the project
 
 VI.Special thanks to frostbyte of futurecraft fame, two from IC forums, and everyone who took the time/had the decency to humor my usually inane questions or help me network with others.
 
